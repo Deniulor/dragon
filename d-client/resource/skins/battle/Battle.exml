@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="Battle" width="640" height="560" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Component id="me" width="122" height="470" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="0" left="50"/>
+	<e:Component width="144.67" height="47.34" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="-211.5" left="299" id="player0"/>
+	<e:Component id="player1" width="144.67" height="47.34" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="-119.5" left="299"/>
+	<e:Component width="144.67" height="47.34" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="-23.5" left="299" id="player2"/>
+	<e:Component width="144.67" height="47.34" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="58.5" left="299" id="player3"/>
+	<e:Component width="144.67" height="47.34" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="140.5" left="299" id="player4"/>
+	<e:Component width="144.67" height="47.34" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="211.5" left="299" id="player5"/>
+	<e:Component id="monster0" width="150" height="147.33" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="-119.5" left="460"/>
+	<e:Component id="monster1" width="152.67" height="164.67" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="82.5" left="460"/>
+</e:Skin>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="main" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="640">
+	<e:Image source="bg_png" width="640" height="1136" y="0" />
+	<e:Component id="battle" left="0" right="0" top="150" bottom="426" skinName="Battle" />
+</e:Skin>

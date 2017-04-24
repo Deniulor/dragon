@@ -1,0 +1,503 @@
+{
+	"groups": [
+		{
+			"keys": "login_bg_jpg,loading_bg_png,loading_light_png,loading_line_jpg",
+			"name": "loading"
+		},
+		{
+			"keys": "general_txt,factor_txt",
+			"name": "data"
+		},
+		{
+			"keys": "loading_line_jpg",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "default.res.json",
+			"type": "json",
+			"name": "default.res_json"
+		},
+		{
+			"url": "assets/loading/login_bg.jpg",
+			"type": "image",
+			"name": "login_bg_jpg"
+		},
+		{
+			"url": "data/factor.txt",
+			"type": "text",
+			"name": "factor_txt"
+		},
+		{
+			"url": "data/general.txt",
+			"type": "text",
+			"name": "general_txt"
+		},
+		{
+			"url": "assets/loading/loading_bg.png",
+			"type": "image",
+			"name": "loading_bg_png"
+		},
+		{
+			"url": "assets/loading/loading_light.png",
+			"type": "image",
+			"name": "loading_light_png"
+		},
+		{
+			"url": "assets/loading/loading_line.jpg",
+			"type": "image",
+			"name": "loading_line_jpg"
+		},
+		{
+			"url": "assets/tit/server_hot.png",
+			"type": "image",
+			"name": "server_hot_png"
+		},
+		{
+			"url": "assets/tit/server_new.png",
+			"type": "image",
+			"name": "server_new_png"
+		},
+		{
+			"url": "assets/tit/startgame.png",
+			"type": "image",
+			"name": "startgame_png"
+		},
+		{
+			"url": "assets/button/btn_bg3.png",
+			"type": "image",
+			"name": "btn_bg3_png"
+		},
+		{
+			"url": "assets/form/tit_bg.png",
+			"type": "image",
+			"name": "tit_bg_png"
+		},
+		{
+			"url": "assets/effect/effect_anjian.png",
+			"type": "image",
+			"name": "effect_anjian_png"
+		},
+		{
+			"url": "assets/effect/effect_battlefire.jpg",
+			"type": "image",
+			"name": "effect_battlefire_jpg"
+		},
+		{
+			"url": "assets/effect/effect_btn.jpg",
+			"type": "image",
+			"name": "effect_btn_jpg"
+		},
+		{
+			"url": "assets/effect/effect_death.jpg",
+			"type": "image",
+			"name": "effect_death_jpg"
+		},
+		{
+			"url": "assets/effect/effect_em.jpg",
+			"type": "image",
+			"name": "effect_em_jpg"
+		},
+		{
+			"url": "assets/effect/effect_enemy.jpg",
+			"type": "image",
+			"name": "effect_enemy_jpg"
+		},
+		{
+			"url": "assets/effect/effect_finsh.jpg",
+			"type": "image",
+			"name": "effect_finsh_jpg"
+		},
+		{
+			"url": "assets/effect/effect_fire.jpg",
+			"type": "image",
+			"name": "effect_fire_jpg"
+		},
+		{
+			"url": "assets/effect/effect_fireboom.jpg",
+			"type": "image",
+			"name": "effect_fireboom_jpg"
+		},
+		{
+			"url": "assets/effect/effect_firefu.jpg",
+			"type": "image",
+			"name": "effect_firefu_jpg"
+		},
+		{
+			"url": "assets/effect/effect_fly.jpg",
+			"type": "image",
+			"name": "effect_fly_jpg"
+		},
+		{
+			"url": "assets/effect/effect_icon_prange.jpg",
+			"type": "image",
+			"name": "effect_icon_prange_jpg"
+		},
+		{
+			"url": "assets/effect/effect_icon_purple.jpg",
+			"type": "image",
+			"name": "effect_icon_purple_jpg"
+		},
+		{
+			"url": "assets/effect/effect_icon_red.jpg",
+			"type": "image",
+			"name": "effect_icon_red_jpg"
+		},
+		{
+			"url": "assets/effect/effect_iconboom.jpg",
+			"type": "image",
+			"name": "effect_iconboom_jpg"
+		},
+		{
+			"url": "assets/effect/effect_jian.jpg",
+			"type": "image",
+			"name": "effect_jian_jpg"
+		},
+		{
+			"url": "assets/effect/effect_jiantou.png",
+			"type": "image",
+			"name": "effect_jiantou_png"
+		},
+		{
+			"url": "assets/effect/effect_lvup.jpg",
+			"type": "image",
+			"name": "effect_lvup_jpg"
+		},
+		{
+			"url": "assets/effect/effect_misson.jpg",
+			"type": "image",
+			"name": "effect_misson_jpg"
+		},
+		{
+			"url": "assets/effect/effect_missonfinsh.jpg",
+			"type": "image",
+			"name": "effect_missonfinsh_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_gm.jpg",
+			"type": "image",
+			"name": "effect_skill_gm_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_gm2.jpg",
+			"type": "image",
+			"name": "effect_skill_gm2_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_gm3.jpg",
+			"type": "image",
+			"name": "effect_skill_gm3_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_gm5.jpg",
+			"type": "image",
+			"name": "effect_skill_gm5_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_ice.jpg",
+			"type": "image",
+			"name": "effect_skill_ice_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_lei.jpg",
+			"type": "image",
+			"name": "effect_skill_lei_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_light.jpg",
+			"type": "image",
+			"name": "effect_skill_light_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_tl.jpg",
+			"type": "image",
+			"name": "effect_skill_tl_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_tl1.jpg",
+			"type": "image",
+			"name": "effect_skill_tl1_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_tl2.jpg",
+			"type": "image",
+			"name": "effect_skill_tl2_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_tl3.jpg",
+			"type": "image",
+			"name": "effect_skill_tl3_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_tl4.jpg",
+			"type": "image",
+			"name": "effect_skill_tl4_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_tl5.jpg",
+			"type": "image",
+			"name": "effect_skill_tl5_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_xy1.jpg",
+			"type": "image",
+			"name": "effect_skill_xy1_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_xy2.jpg",
+			"type": "image",
+			"name": "effect_skill_xy2_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_xy3.jpg",
+			"type": "image",
+			"name": "effect_skill_xy3_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_xy4.jpg",
+			"type": "image",
+			"name": "effect_skill_xy4_jpg"
+		},
+		{
+			"url": "assets/effect/effect_skill_xy5.jpg",
+			"type": "image",
+			"name": "effect_skill_xy5_jpg"
+		},
+		{
+			"url": "assets/effect/effect_uiboss.jpg",
+			"type": "image",
+			"name": "effect_uiboss_jpg"
+		},
+		{
+			"url": "assets/icon/shop_iconbg.png",
+			"type": "image",
+			"name": "shop_iconbg_png"
+		},
+		{
+			"url": "assets/fnt/battle_number.fnt",
+			"type": "font",
+			"name": "battle_number_fnt"
+		},
+		{
+			"url": "assets/fnt/battle_number.png",
+			"type": "image",
+			"name": "battle_number_png"
+		},
+		{
+			"url": "assets/fnt/bj_number.fnt",
+			"type": "font",
+			"name": "bj_number_fnt"
+		},
+		{
+			"url": "assets/fnt/bj_number.png",
+			"type": "image",
+			"name": "bj_number_png"
+		},
+		{
+			"url": "assets/effect/effect_anjian.json",
+			"type": "json",
+			"name": "effect_anjian_json"
+		},
+		{
+			"url": "assets/effect/effect_battlefire.json",
+			"type": "json",
+			"name": "effect_battlefire_json"
+		},
+		{
+			"url": "assets/effect/effect_em.json",
+			"type": "json",
+			"name": "effect_em_json"
+		},
+		{
+			"url": "assets/effect/effect_btn.json",
+			"type": "json",
+			"name": "effect_btn_json"
+		},
+		{
+			"url": "assets/effect/effect_death.json",
+			"type": "json",
+			"name": "effect_death_json"
+		},
+		{
+			"url": "assets/effect/effect_enemy.json",
+			"type": "json",
+			"name": "effect_enemy_json"
+		},
+		{
+			"url": "assets/effect/effect_finsh.json",
+			"type": "json",
+			"name": "effect_finsh_json"
+		},
+		{
+			"url": "assets/effect/effect_fireboom.json",
+			"type": "json",
+			"name": "effect_fireboom_json"
+		},
+		{
+			"url": "assets/effect/effect_firefu.json",
+			"type": "json",
+			"name": "effect_firefu_json"
+		},
+		{
+			"url": "assets/effect/effect_fire.json",
+			"type": "json",
+			"name": "effect_fire_json"
+		},
+		{
+			"url": "assets/effect/effect_fly.json",
+			"type": "json",
+			"name": "effect_fly_json"
+		},
+		{
+			"url": "assets/effect/effect_icon_prange.json",
+			"type": "json",
+			"name": "effect_icon_prange_json"
+		},
+		{
+			"url": "assets/effect/effect_icon_purple.json",
+			"type": "json",
+			"name": "effect_icon_purple_json"
+		},
+		{
+			"url": "assets/effect/effect_icon_red.json",
+			"type": "json",
+			"name": "effect_icon_red_json"
+		},
+		{
+			"url": "assets/effect/effect_iconboom.json",
+			"type": "json",
+			"name": "effect_iconboom_json"
+		},
+		{
+			"url": "assets/effect/effect_jian.json",
+			"type": "json",
+			"name": "effect_jian_json"
+		},
+		{
+			"url": "assets/effect/effect_jiantou.json",
+			"type": "json",
+			"name": "effect_jiantou_json"
+		},
+		{
+			"url": "assets/effect/effect_lvup.json",
+			"type": "json",
+			"name": "effect_lvup_json"
+		},
+		{
+			"url": "assets/effect/effect_misson.json",
+			"type": "json",
+			"name": "effect_misson_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_gm.json",
+			"type": "json",
+			"name": "effect_skill_gm_json"
+		},
+		{
+			"url": "assets/effect/effect_missonfinsh.json",
+			"type": "json",
+			"name": "effect_missonfinsh_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_gm2.json",
+			"type": "json",
+			"name": "effect_skill_gm2_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_gm3.json",
+			"type": "json",
+			"name": "effect_skill_gm3_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_lei.json",
+			"type": "json",
+			"name": "effect_skill_lei_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_gm5.json",
+			"type": "json",
+			"name": "effect_skill_gm5_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_light.json",
+			"type": "json",
+			"name": "effect_skill_light_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_tl.json",
+			"type": "json",
+			"name": "effect_skill_tl_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_ice.json",
+			"type": "json",
+			"name": "effect_skill_ice_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_tl2.json",
+			"type": "json",
+			"name": "effect_skill_tl2_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_tl1.json",
+			"type": "json",
+			"name": "effect_skill_tl1_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_tl4.json",
+			"type": "json",
+			"name": "effect_skill_tl4_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_tl5.json",
+			"type": "json",
+			"name": "effect_skill_tl5_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_tl3.json",
+			"type": "json",
+			"name": "effect_skill_tl3_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_xy2.json",
+			"type": "json",
+			"name": "effect_skill_xy2_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_xy1.json",
+			"type": "json",
+			"name": "effect_skill_xy1_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_xy3.json",
+			"type": "json",
+			"name": "effect_skill_xy3_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_xy4.json",
+			"type": "json",
+			"name": "effect_skill_xy4_json"
+		},
+		{
+			"url": "assets/effect/effect_skill_xy5.json",
+			"type": "json",
+			"name": "effect_skill_xy5_json"
+		},
+		{
+			"url": "assets/effect/effect_uiboss.json",
+			"type": "json",
+			"name": "effect_uiboss_json"
+		},
+		{
+			"url": "assets/button/btn_main.png",
+			"type": "image",
+			"name": "btn_main_png"
+		},
+		{
+			"url": "assets/form/bg.png",
+			"type": "image",
+			"name": "bg_png"
+		}
+	]
+}

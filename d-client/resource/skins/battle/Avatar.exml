@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="Avatar" width="150" height="470" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+    <e:Rect id="hp_bg" bottom="0" left="0" top="0" right="0" strokeColor="0x000000" strokeWeight="0" ellipseWidth="20" fillColor="0xcc4a41"/>
+    <e:Rect id="hp" bottom="0" left="0" top="0" right="0" fillColor="0x6BB02E" strokeColor="0x000000" strokeWeight="0" ellipseWidth="20" height="30"/>
+    <e:Rect id="border" bottom="-1" left="-1" top="-1" right="-1" fillColor="0xCC4A41" strokeColor="0x000000" strokeWeight="3" ellipseWidth="20" fillAlpha="0"/>
+	<e:Group id="skills" anchorOffsetY="0" anchorOffsetX="0" left="15" right="15" bottom="20" top="20" visible="false">
+		<e:Component width="100" height="27" x="63" y="118" skinName="Skill"/>
+		<e:Component width="100" height="30" x="63" y="118" skinName="Skill"/>
+		<e:Component width="100" height="30" x="63" y="118" skinName="Skill"/>
+		<e:Component width="100" height="30" x="63" y="118" skinName="Skill"/>
+		<e:layout>
+			<e:VerticalLayout horizontalAlign="center" verticalAlign="middle" gap="80"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

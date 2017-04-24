@@ -1,0 +1,5 @@
+bin-debug/
+bin-release/
+index.html
+.wing/exml.json
+.wing/packConfig.json
