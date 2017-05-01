@@ -8,13 +8,6 @@ module dragon {
 		}
 
 		public enter<T extends battle0.Battle>(clazz: { new (): T; }, param?: any): battle0.Battle {
-			// var battle = <T>this.battleCache[clazz.prototype.getBattleType()];
-			// if (!battle) {
-			// 	battle = <T>Object.create(clazz.prototype);
-			// 	battle.constructor.apply(battle); //调用构造函数
-			// 	this.battleCache[clazz.prototype.getBattleType()] = battle;
-			// }
-
 			let battle = <T>Object.create(clazz.prototype);
 			battle.constructor.apply(battle); //调用构造函数
 
@@ -25,8 +18,7 @@ module dragon {
 			view.mainscene.setBattle(battle.view);
 			battle.start();
 
-			this.$current = battle;
-			return null;
+			return this.$current = battle;
 		}
 
 		public enterMain(): battle0.Battle {

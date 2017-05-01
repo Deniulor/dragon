@@ -1,4 +1,5 @@
 ﻿唯一标示	数值	说明（程序不读，仅方便填表）
-id	Value	Desction
+number	string	string
+id	Value	#Desction
 CameraRotUp	45	镜头俯仰角
 FieldOfView	40	镜头广角

@@ -23,8 +23,7 @@ module dragon.battle0 {
                 super(skill);
             }
             public settle(me: Unit, tar: Unit) {
-                var defattr = model.Attribute[<string>this.skill.skilldata.DefAttr];
-                var dmg = (me.attr(model.Attribute.ATK) - (tar.attr(defattr) || 0)) * this.skill.strength;
+                var dmg = (me.attr(enums.Attribute.ATK) - (tar.attr(enums.Attribute.DEF) || 0)) * this.skill.strength;
                 dmg = dmg <= 0 ? 1 : dmg;
                 var isCritical = false;
                 var isHit = me.hit(tar);
@@ -36,7 +35,7 @@ module dragon.battle0 {
                 } else {
                     dmg = 0; //Miss
                 }
-                dmg *= 1 + (me.attr(model.Attribute.Damage) - tar.attr(model.Attribute.Reduction)) / 100;
+                dmg *= 1 + (me.attr(enums.Attribute.Damage) - tar.attr(enums.Attribute.Reduction)) / 100;
                 dmg = Math.floor(dmg);
                 tar.damage(dmg, me);
                 tar.view.onDamage(me, dmg, isCritical);
@@ -49,7 +48,7 @@ module dragon.battle0 {
                 super(skill);
             }
             public settle(me: Unit, tar: Unit) {
-                var heal = me.attr(model.Attribute.ATK) * this.skill.strength;
+                var heal = me.attr(enums.Attribute.ATK) * this.skill.strength;
                 heal = Math.floor(heal);
                 tar.heal(heal);
                 tar.view.onHeal(heal);

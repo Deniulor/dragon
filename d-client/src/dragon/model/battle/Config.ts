@@ -1,6 +1,6 @@
 module dragon.battle0 {
 	class Config {
-		public CriticalMultiple: number;
+		public CriticalMultiple: number = 1.2;
 
 	}
 

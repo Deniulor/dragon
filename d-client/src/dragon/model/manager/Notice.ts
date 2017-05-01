@@ -8,6 +8,5 @@ module dragon.model {
 		
 		public addPrompt(content: string, time: number = 1700) {
 		}
-
 	}
 }

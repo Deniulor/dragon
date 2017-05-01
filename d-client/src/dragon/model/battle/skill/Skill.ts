@@ -9,10 +9,21 @@ module dragon.battle0 {
 		private selector: Selector;
 		private settler: Settler;
 
-		public constructor() {
+		public constructor(unit: Unit, skillid: any, skilllv: number) {
+			this.unit = unit;
+			this.skilllv = skilllv;
+
+			let skilldata = kernel.data.group('skill').find(skillid);
+			this.skilldata = skilldata;
+
+			this.selector = new Selector(skilldata.SelectTarget, skilldata.SelectStrategy, skilldata.CastTarget, skilldata.SelectArea, skilldata.SelectParam);
+			this.settler = SettlerFactory.create(skilldata.SettleType, this);
+			this.cd = 0;
 		}
 
-		public get enable(): boolean { return true; }
+		public get enable(): boolean {
+			return this.cd <= 0;
+		}
 
 		public get priority(): number {
 			return this.skilldata.Priority;
@@ -30,19 +41,20 @@ module dragon.battle0 {
 			return (this.skilldata.Attr + this.skilldata.AttrAdd * this.skilllv) / 100;
 		}
 
-		public cast(): boolean {
-			var select = this.selector.select(this.unit, this.unit.battle.all);
-			if (!select.selected || select.castOn.length <= 0) {
+		public select() {
+			return this.selector.select(this.unit, this.unit.battle.all);
+		}
+		public cast(select: { selected: Unit, caston: Array<Unit> }): boolean {
+			if (!select.selected || select.caston.length <= 0) {
 				return false;
 			}
-			var tar = select.selected;
 			this.resetCD();
-			// 发射弹道
+			// 发射弹幕
 			var bullet = this.bullet;
 			if (!bullet) {
-				this.settle(select.selected, select.castOn);//当即结算
+				this.settle(select.selected, select.caston);//当即结算
 			} else {
-				this.unit.battle.addBullet(new Bullet(this, select.selected, select.castOn));
+				this.unit.battle.addBullet(new Bullet(this, select.selected, select.caston));
 			}
 			// console.log("[cast] time:%s, group:%s, caster:%s, loc:(%s, %s), skill:%s, seed:%s", //
 			// 	this.creature.battle['time'], this.creature.Group, this.creature.id, this.creature.x, this.creature.y, this.skilldata.id, this.creature.battle["seed"]);
@@ -67,19 +79,10 @@ module dragon.battle0 {
 				var value = this.settler.settle(this.unit, tar);
 				settles.push({
 					victim: tar.id, // 受攻击人
-					vgroup: tar.Group, // 受攻击人阵营
+					vgroup: tar.group, // 受攻击人阵营
 					value: value // 伤害
 				});
 			}
-
-			this.unit.battle.record({
-				time: this.unit.battle['time'] || egret.getTimer().toFixed(),
-				attacker: this.unit.id,// 攻击者
-				agroup: this.unit.Group, // 攻击者阵营
-
-				skill: this.skilldata.id, // 使用的技能
-				settles: settles//结算结果
-			});
 		}
 
 		public update(dt: number) {

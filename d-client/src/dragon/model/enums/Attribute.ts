@@ -1,4 +1,4 @@
-module dragon.model {
+module dragon.enums {
 	export enum Attribute {
 		None, // 无
 		MaxHP, // 最大生命值

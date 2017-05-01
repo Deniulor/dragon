@@ -11,9 +11,14 @@ module dragon.kernel0 {
 		private errGroup = new Group("ERROR GROUP", null);
 
 		public add(groupName: string, data: any) {
+			// try {
 			groupName = groupName.replace('_txt', '').toLocaleLowerCase();
 			data = RES.getRes(data.name);
 			this.groups[groupName] = new Group(groupName, data);
+			// } catch (error) {
+			// 	console.error('配置表' + groupName + '解析错误', error);
+			// 	throw error;
+			// }
 		}
 		public group(groupname: string): IGroup {
 			groupname = groupname.toLocaleLowerCase();
@@ -75,54 +80,87 @@ module dragon.kernel0 {
 		private datas: { [k: string]: any };
 		private name: string;
 		private $length;
+		public get length() { return this.$length; }
 
-		public constructor(name: string, data: string) {
+		public constructor(gname: string, loaddata: string) {
 			this.datas = {};
 			this.$length = 0;
-			this.name = name;
+			this.name = gname;
 
-			if (name == "ERROR GROUP") {
+			if (gname == "ERROR GROUP") {
 				// 错误组 无法进行初始化
 				return;
 			}
-			if (!data) {
-				console.error('数据[%s]读取数据失败.', name);
+			if (!loaddata) {
+				console.error('数据表[%s]读取数据失败.', gname);
 				return;
 			}
 
-			var begin = new Date().getMilliseconds();
-			var datas = data.split(/\r?\n/);
-			var fields: { [k: number]: string } = {};
-			datas[1].split('\t').forEach(function (i, k) {
-				if (i.length <= 0 || i.charAt(0) == '#') {
-					return;
-				}
-				fields[i] = k;
-			});
-			datas.splice(0, 2);
-
-			var result = {}, item;
-
-			for (var i = 0; i < datas.length; ++i) {
-				var k = datas[i];
-				if (k.trim() == '') {
-					continue;
-				}
-				item = mapData(fields, k.split('\t'));
-				if (result[item.id] != undefined) {
-					console.error('[%s]表有重复的id[%s]', this.name, item.id);
-				} else {
-					this.$length++;
-				}
-				result[item.id] = item;
+			let begin = new Date().getMilliseconds();
+			let datas: Array<Array<string>> = [];
+			let datas0 = loaddata.split(/\r?\n/);
+			for (let i = 0; i < datas0.length; ++i) {
+				if (datas0[i].trim() == '') continue
+				datas.push(datas0[i].split('\t'));
 			}
 
+			if (datas.length < 3) {
+				console.error('数据表[%s]读取数据格式错误,应至少三行.', gname);
+			}
+
+			let fields: {
+				[k: string]: {
+					index: number,
+					name: string,
+					isArray: boolean,
+					parser: (str: string) => any
+				}
+			} = {};
+			for (let i = datas[0].length - 1; i >= 0; --i) {
+				let source_type = datas[1][i];
+				let field = {
+					index: i,//第0行是备注
+					name: datas[2][i],//第2行是字段名
+					isArray: /^list<(.+)>$/i.test(source_type),
+					parser: parser(source_type)
+				}
+				fields[field.name] = field;
+			}
+			datas.splice(0, 3);//去掉备注，类型，字段名的前三行, 剩下的是可用数据
+
+			let result: { [k: string]: any } = {};
+			let idindex = fields['id'].index;
+			for (let i = 0; i < datas.length; ++i) {
+				let curid = datas[i][idindex];
+				result[curid] = { id: curid };//初始化对象表
+			}
+
+
+			for (let fieldName in fields) {
+				let field = fields[fieldName];
+				if (field.isArray) {
+					for (let i = 0; i < datas.length; ++i) {
+						let cur_data = datas[i];
+						let cur_value = [];
+						let arr = cur_data[field.index].split(';');
+						for (let j = 0; j < arr.length; ++j) {
+							cur_value.push(field.parser(arr[i]));
+						}
+						// result[cur_id]-> field.name = cur_value;
+						result[cur_data[idindex]][field.name] = cur_value;
+					}
+				} else {
+					for (let i = 0; i < datas.length; ++i) {
+						let cur_data = datas[i];
+						let cur_value = [];
+						// result[cur_id]-> field.name = cur_value;
+						result[cur_data[idindex]][field.name] = field.parser(cur_data[field.index]);
+					}
+				}
+			}
 			this.datas = result;
 		}
 
-		public get length() {
-			return this.$length;
-		}
 
 		/**
 		 * find 根据ID来查询数据
@@ -168,47 +206,21 @@ module dragon.kernel0 {
 			return this.datas;
 		}
 	}
-
-	function mapData(fields: { [k: number]: string }, item) {
-		var obj = {};
-		for (var k in fields) {
-			var va = item[fields[k]];
-			// 解析成列表
-			if (k.search("List$") != -1) {
-				var temp = [];
-				if (va.length > 0) {
-					va = va.split(';');
-					for (var index = 0; index < va.length; index++) {
-						var value = va[index];
-						if (isNum(value)) {
-							value = Number(value);
-						}
-						temp.push(value);
-					}
-				}
-				va = temp;
-			} else {
-				if (isNum(va)) {
-					va = Number(va);
+	function parser(type: string): (str: string) => any {
+		type = type.replace(/^list<(.+)>$/i, ($1, $2) => $2).toLowerCase();
+		if (type == 'number') {
+			return Number
+		} else if (type == 'string') {
+			return (v) => v
+		} else if (/^enum<\w+>$/.test(type)) {
+			let enum_name = type.replace(/^enum</, '').replace(/>$/, '');
+			for (let name in dragon.enums) {
+				if (new RegExp(enum_name, 'i').test(name)) {
+					return (str) => { return dragon.enums[name][str]; }
 				}
 			}
-			obj[k] = va;
+			throw new Error('错误的枚举定义:' + enum_name);
 		}
-		return obj;
-	}
-
-	function isNum(s) {
-		if (typeof s == 'number')
-			return true;
-		if (typeof s != 'string')
-			return false;
-
-		if (s != null) {
-			var r, re;
-			re = /-?\d*\.?\d*/i; //\d表示数字,*表示匹配多个数字
-			r = s.match(re);
-			return (r == s) ? true : false;
-		}
-		return false;
+		throw new Error('错误的类型定义:' + type);
 	}
 }

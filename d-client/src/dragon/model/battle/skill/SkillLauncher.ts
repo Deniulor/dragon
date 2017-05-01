@@ -23,21 +23,27 @@ module dragon.battle0 {
 			}
 		}
 
-		public nextSkill(): Skill {
+		public castSkill(): boolean {
 			if (this.cd > 0) {
 				return null;
 			}
-			var skill: Skill = null;
-			for (var i = 0; i < this.$skillList.length; ++i) {
-				var s = this.$skillList[i];
+			let skill: Skill = null;
+			let select = null;
+			for (let i = 0; i < this.$skillList.length; ++i) {
+				let s = this.$skillList[i];
 				if (!s.enable) {
+					continue;
+				}
+				let select0 = s.select();
+				if (!select0 || !select0.selected || select0.caston.length < 0) {
 					continue;
 				}
 				if (skill == null || skill.priority < s.priority) {
 					skill = s;
+					select = select0;
 				}
 			}
-			return skill;
+			return skill && skill.cast(select);
 		}
 
 		public resetCD() {

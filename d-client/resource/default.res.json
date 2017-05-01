@@ -5,12 +5,16 @@
 			"name": "loading"
 		},
 		{
-			"keys": "general_txt,factor_txt",
+			"keys": "general_txt,factor_txt,attribute_txt,buff_txt,monster_txt,skill_txt,unit_txt",
 			"name": "data"
 		},
 		{
 			"keys": "loading_line_jpg",
 			"name": "preload"
+		},
+		{
+			"keys": "effect_anjian_json,effect_anjian_png,effect_battlefire_jpg,effect_battlefire_json,effect_btn_jpg,effect_btn_json,effect_death_jpg,effect_death_json,effect_em_jpg,effect_em_json,effect_enemy_jpg,effect_enemy_json,effect_finsh_jpg,effect_finsh_json,effect_fire_jpg,effect_fire_json,effect_fireboom_jpg,effect_fireboom_json,effect_firefu_jpg,effect_firefu_json,effect_fly_jpg,effect_fly_json,effect_icon_prange_jpg,effect_icon_prange_json,effect_icon_purple_jpg,effect_icon_purple_json,effect_icon_red_jpg,effect_icon_red_json,effect_iconboom_jpg,effect_iconboom_json,effect_jian_jpg,effect_jian_json,effect_jiantou_json,effect_jiantou_png,effect_lvup_jpg,effect_lvup_json,effect_misson_jpg,effect_misson_json,effect_missonfinsh_jpg,effect_missonfinsh_json,effect_skill_gm_jpg,effect_skill_gm_json,effect_skill_gm2_jpg,effect_skill_gm2_json,effect_skill_gm3_jpg,effect_skill_gm3_json,effect_skill_gm5_jpg,effect_skill_gm5_json,effect_skill_ice_jpg,effect_skill_ice_json,effect_skill_lei_jpg,effect_skill_lei_json,effect_skill_light_jpg,effect_skill_light_json,effect_skill_tl_jpg,effect_skill_tl_json,effect_skill_tl1_jpg,effect_skill_tl1_json,effect_skill_tl2_jpg,effect_skill_tl2_json,effect_skill_tl3_jpg,effect_skill_tl3_json,effect_skill_tl4_jpg,effect_skill_tl4_json,effect_skill_tl5_jpg,effect_skill_tl5_json,effect_skill_xy1_jpg,effect_skill_xy1_json,effect_skill_xy2_jpg,effect_skill_xy2_json,effect_skill_xy3_jpg,effect_skill_xy3_json,effect_skill_xy4_jpg,effect_skill_xy4_json,effect_skill_xy5_jpg,effect_skill_xy5_json,effect_uiboss_jpg,effect_uiboss_json",
+			"name": "effect"
 		}
 	],
 	"resources": [
@@ -498,6 +502,31 @@
 			"url": "assets/form/bg.png",
 			"type": "image",
 			"name": "bg_png"
+		},
+		{
+			"url": "data/attribute.txt",
+			"type": "text",
+			"name": "attribute_txt"
+		},
+		{
+			"url": "data/buff.txt",
+			"type": "text",
+			"name": "buff_txt"
+		},
+		{
+			"url": "data/monster.txt",
+			"type": "text",
+			"name": "monster_txt"
+		},
+		{
+			"url": "data/skill.txt",
+			"type": "text",
+			"name": "skill_txt"
+		},
+		{
+			"url": "data/unit.txt",
+			"type": "text",
+			"name": "unit_txt"
 		}
 	]
 }

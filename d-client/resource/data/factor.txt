@@ -1,5 +1,4 @@
 ﻿系数名称	系数值	备注
+number	number	string
 id	Value	Remarks
-Arena_FightTime	90	单场战斗时间
-Arena_OpponentsSize	4	对手长度
-Arena_OpponentsOffset	5	对手随机幅度
+ATKCD	1	攻击间隔

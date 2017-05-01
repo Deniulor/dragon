@@ -16,10 +16,13 @@ module dragon.view {
 		public afterLoaded() {
 			if (this.battle instanceof Battle)
 				return;
-			this.setBattle(new Battle(dragon.battle.enterMain()));
+			this.setBattle(dragon.battle.enterMain().view);
 		}
 
 		public setBattle(battle: Battle) {
+			if (this.battle === battle) {
+				return;
+			}
 			if (this.battle) {
 				this.removeChild(this.battle);
 			}

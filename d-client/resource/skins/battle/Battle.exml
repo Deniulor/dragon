@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="Battle" width="640" height="560" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Component id="me" width="122" height="470" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="0" left="50"/>
-	<e:Component width="144.67" height="47.34" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="-211.5" left="299" id="player0"/>
-	<e:Component id="player1" width="144.67" height="47.34" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="-119.5" left="299"/>
-	<e:Component width="144.67" height="47.34" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="-23.5" left="299" id="player2"/>
-	<e:Component width="144.67" height="47.34" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="58.5" left="299" id="player3"/>
-	<e:Component width="144.67" height="47.34" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="140.5" left="299" id="player4"/>
-	<e:Component width="144.67" height="47.34" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="211.5" left="299" id="player5"/>
-	<e:Component id="monster0" width="150" height="147.33" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="-119.5" left="460"/>
-	<e:Component id="monster1" width="152.67" height="164.67" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="82.5" left="460"/>
+	<e:Rect id="bg" top="0" bottom="0" right="0" left="0" fillColor="0x636cff"/>
+	<e:Group id="selfContainer" width="122" height="470" x="50" y="46" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Component id="me" width="122" height="470" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" scaleX="1" scaleY="1" x="0" verticalCenter="0"/>
+	</e:Group>
+	<e:Group id="oppoContainer" width="150" height="560" x="450" y="0" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Component id="monster0" width="150" height="147.33" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="-92" x="0" y="42" scaleX="1" scaleY="1"/>
+		<e:Component id="monster1" width="152.67" height="164.67" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="81.5" x="0" y="235" scaleX="1" scaleY="1"/>
+	</e:Group>
+	<e:Group id="playerContainer" width="148" height="560" x="228" y="0" anchorOffsetY="0" anchorOffsetX="0">
+		<e:Component width="144" height="47" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="-211.5" id="player0" x="0" y="42.67" scaleX="1" scaleY="1"/>
+		<e:Component id="player1" width="144.67" height="47.34" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="-119.5" x="0" y="134.67" scaleX="1" scaleY="1"/>
+		<e:Component width="144.67" height="47.34" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="-23.5" id="player2" x="0" y="230.67" scaleX="1" scaleY="1"/>
+		<e:Component width="144.67" height="47.34" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="58.5" id="player3" x="0" y="312.67" scaleX="1" scaleY="1"/>
+		<e:Component width="144.67" height="47.34" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="140.5" id="player4" x="0" y="394.67" scaleX="1" scaleY="1"/>
+		<e:Component width="144.67" height="47.34" anchorOffsetX="0" anchorOffsetY="0" skinName="Avatar" verticalCenter="211.5" id="player5" x="0" y="465.67" scaleX="1" scaleY="1"/>
+	</e:Group>
 </e:Skin>

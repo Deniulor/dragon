@@ -62,7 +62,7 @@ module dragon.panel {
 
 
 		// private groups: Array<string> = ["data", "preload", "effect", "icon", "fnt"];
-		private groups: Array<string> = ["data", "preload"];
+		private groups: Array<string> = ["data", "preload", "effect"];
 		private totalItems = -1;
 		private loadItem = 0;
 		private loadGroup = 0;
