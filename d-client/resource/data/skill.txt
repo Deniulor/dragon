@@ -1,38 +1,38 @@
-id	技能名称	技能描述	图标	学习等级	使用优先级	检索用目标	检索策略	受法术影响的目标	弹道	弹道速度	结算特效	结算类型	删除Buff-buffid	添加Buff-buffid	1级属性	数值增量	冷却	1级消耗量	消耗增量	战力提升
-number	string	string	string	number	number	string	string	string	number	number	string	string	list<number>	number	number	number	number	number	number	number
-id	Name	Describe	Icon	Require	Priority	SelectTarget	SelectStrategy	CastTarget	Bullet	BulletSpeed	SettleEffect	SettleType	ClearBuff	Buff	Attr	AttrAdd	CD	Gold	GoldAdd	Power
-0	野怪攻击	SkillDescribe_1	item0004_jpg	0	1	Enemy		Enemy		1	enemy	Damage			100	1	800	3100	1500	20
-1	SkillName_1	SkillDescribe_1	skill_gm1_jpg	0	1	Enemy		Enemy	fire	1	skill_gm	Damage			100	1.2	900	3100	1500	20
-2	SkillName_2	SkillDescribe_2	skill_gm2_jpg	7	2	Enemy		Enemy		1	skill_gm2	Damage			70	1.5	5500	3100	1500	40
-3	SkillName_3	SkillDescribe_3	skill_gm3_jpg	20	3	Enemy		Enemy		1	skill_gm3	Damage			80	1.6	9000	3100	1500	80
-4	SkillName_4	SkillDescribe_4	skill_gm4_jpg	45	4	Enemy		Enemy		1	skill_ice	Damage			150	1.7	10000	3100	1500	160
-5	SkillName_5	SkillDescribe_5	skill_gm5_jpg	70	5	Enemy		Enemy	fire	1	skill_gm5	Damage			200	1.8	13000	3100	1500	320
-11	SkillName_11	SkillDescribe_11	skill_tl1_jpg	0	1	Enemy		Enemy		1	skill_tl	Damage			100	1	1100	3100	1500	20
-12	SkillName_12	SkillDescribe_12	skill_tl2_jpg	7	2	Enemy		Enemy		1	skill_tl1	Damage			138	1.2	5000	3100	1500	40
-13	SkillName_13	SkillDescribe_13	skill_tl3_jpg	20	3	Enemy		Enemy		1	skill_tl5	Damage			70	0.85	9000	3100	1500	80
-14	SkillName_14	SkillDescribe_14	skill_tl4_jpg	45	4	Enemy		Enemy		1	skill_tl4	Damage			100	2	12000	3100	1500	160
-15	SkillName_15	SkillDescribe_15	skill_tl5_jpg	70	5	Enemy		Enemy		1	skill_tl3	Damage			80	1.05	15000	3100	1500	320
-21	SkillName_21	SkillDescribe_21	skill_xy1_jpg	0	1	Enemy		Enemy	firefu	1	skill_xy1	Damage			100	1.05	1000	3100	1500	20
-22	SkillName_22	SkillDescribe_22	skill_xy2_jpg	7	2	Enemy		Enemy		1	skill_xy2	Damage			138	1.05	4100	3100	1500	40
-23	SkillName_23	SkillDescribe_23	skill_xy3_jpg	20	3	SelfAndAlias	HpMin	SelfAndAlias		1	skill_xy3	Heal			300	3	7600	3100	1500	80
-24	SkillName_24	SkillDescribe_24	skill_xy4_jpg	45	4	Enemy		Enemy	firefu	1	skill_xy4	Damage			50	2	9000	3100	1500	160
-25	SkillName_25	SkillDescribe_25	skill_xy5_jpg	70	5	Enemy		Enemy	firefu	1	skill_xy5	Damage			100	1.05	11000	3100	1500	320
-1001	火麒麟技能	SkillDescribe_1001		0	1	Enemy		Enemy		1	fireboom	Damage			100		1300			
-1002	尹志平技能	SkillDescribe_1001	skill_xy5_jpg	0	1	Enemy		Enemy		1	jian	Damage			10000		1000			
-1003	世界boss普攻	SkillDescribe_1001	skill_xy5_jpg	0	1	Enemy		Enemy		1	jian	Damage			100		800			
-1004	火麒麟空技能	SkillDescribe_1001		0	2	SelfAndAlias		SelfAndAlias		1		Damage			0	0	60000000	0	0	0
-5001	SkillName_5001	SkillDescribe_5001	skill_xy3_jpg	0	1	Enemy		Enemy		1	skill_lei	Damage			105	1	7600	10000	2000	300
-5002	SkillName_5002	SkillDescribe_5002	skill_xy4_jpg	0	1	Group		Group		1		Buff		1	105	1	10000	50000	10000	5000
-5003	SkillName_5003	SkillDescribe_5003	skill_xy5_jpg	0	1	Group		Group		1		Buff		2	105	1	10000	100000	20000	8000
-5004	SkillName_5004	SkillDescribe_5004	skill_xy5_jpg	0	3	Enemy		Enemy		1	enemy	Buff	11		100	0	60000	0	0	0
-5005	SkillName_5005	SkillDescribe_5005	skill_xy5_jpg	0	2	Group		Group		1		Buff		12	110	2	10000	100000	20000	8000
-5006	冰魂回血		skill_xy3_jpg	0	1	Group		Group		1	skill_xy3	Heal			1000000	0	10000000	0	0	0
-5007	经脉副本boss空技能			0	1	SelfAndAlias		SelfAndAlias		1		Damage			0	0	600000	0	0	0
-5008	SkillName_5008	SkillDescribe_5008	skill_xy5_jpg	0	3	Enemy		Enemy		1	enemy	Buff	13		100	0	60000	0	0	0
-5009	剧情副本boss空技能			0	1	SelfAndAlias		SelfAndAlias		1		Damage			0	0	600000	0	0	0
-5010	SkillName_5010	SkillDescribe_5010	skill_xy5_jpg	0	3	Enemy		Enemy		1	enemy	Buff	14		100	0	3000	0	0	0
-5011	SkillName_5011	SkillDescribe_5011	skill_xy5_jpg	0	1	Group		Group		1		Buff		15	5	0.85	5000	100000	20000	8500
-5012	SkillName_5012	SkillDescribe_5012	skill_xy5_jpg	0	1	Group		Group		1		Buff		16	10	0.6	5000	100000	20000	8500
-5013	SkillName_5013	SkillDescribe_5013	skill_xy3_jpg	0	1	Enemy		Enemy		1		Damage			105	1	800	10000	2000	1000
-5014	SkillName_5014	SkillDescribe_5014	skill_xy3_jpg	0	1	Enemy		Enemy		1		Damage			105	1	800	10000	2000	500
-5015	SkillName_5015	SkillDescribe_5015	skill_xy3_jpg	0	1	Enemy		Enemy		1		Damage			105	1	800	10000	2000	300
+id	技能名称	技能描述	图标	学习等级	使用优先级	检索用目标	检索策略	受法术影响的目标	选择器-单体/群体	弹道	弹道速度/每秒	结算特效	结算类型	删除Buff-buffid	添加Buff-buffid	1级属性	数值增量	冷却	1级消耗量	消耗增量	战力提升
+number	string	string	string	number	number	string	string	string	string	string	number	string	string	list<number>	number	number	number	number	number	number	number
+id	Name	Describe	Icon	Require	Priority	SelectTarget	SelectStrategy	CastTarget	SelectType	Bullet	BulletSpeed	SettleEffect	SettleType	ClearBuff	Buff	Attr	AttrAdd	CD	Gold	GoldAdd	Power
+0	野怪攻击	SkillDescribe_1	item0004_jpg	0	1	Enemy		Enemy	Single		1000	enemy	Damage			100	1	800	3100	1500	20
+1	SkillName_1	SkillDescribe_1	skill_gm1_jpg	0	1	Enemy		Enemy	Single	fire	1000	skill_gm	Damage			100	1.2	900	3100	1500	20
+2	SkillName_2	SkillDescribe_2	skill_gm2_jpg	7	2	Enemy		Enemy	All		1000	skill_gm2	Damage			70	1.5	5500	3100	1500	40
+3	SkillName_3	SkillDescribe_3	skill_gm3_jpg	20	3	Enemy		Enemy	All		1000	skill_gm3	Damage			80	1.6	9000	3100	1500	80
+4	SkillName_4	SkillDescribe_4	skill_gm4_jpg	45	4	Enemy		Enemy	Single		1000	skill_ice	Damage			150	1.7	10000	3100	1500	160
+5	SkillName_5	SkillDescribe_5	skill_gm5_jpg	70	5	Enemy		Enemy	All	fire	1000	skill_gm5	Damage			200	1.8	13000	3100	1500	320
+11	SkillName_11	SkillDescribe_11	skill_tl1_jpg	0	1	Enemy		Enemy	Single		1000	skill_tl	Damage			100	1	1100	3100	1500	20
+12	SkillName_12	SkillDescribe_12	skill_tl2_jpg	7	2	Enemy		Enemy	All		1000	skill_tl1	Damage			138	1.2	5000	3100	1500	40
+13	SkillName_13	SkillDescribe_13	skill_tl3_jpg	20	3	Enemy		Enemy	All		1000	skill_tl5	Damage			70	0.85	9000	3100	1500	80
+14	SkillName_14	SkillDescribe_14	skill_tl4_jpg	45	4	Enemy		Enemy	Single		1000	skill_tl4	Damage			100	2	12000	3100	1500	160
+15	SkillName_15	SkillDescribe_15	skill_tl5_jpg	70	5	Enemy		Enemy	All		1000	skill_tl3	Damage			80	1.05	15000	3100	1500	320
+21	SkillName_21	SkillDescribe_21	skill_xy1_jpg	0	1	Enemy		Enemy	Single	firefu	1000	skill_xy1	Damage			100	1.05	1000	3100	1500	20
+22	SkillName_22	SkillDescribe_22	skill_xy2_jpg	7	2	Enemy		Enemy	All		1000	skill_xy2	Damage			138	1.05	4100	3100	1500	40
+23	SkillName_23	SkillDescribe_23	skill_xy3_jpg	20	3	SelfAndAlias	HpMin	SelfAndAlias	Single		1000	skill_xy3	Heal			300	3	7600	3100	1500	80
+24	SkillName_24	SkillDescribe_24	skill_xy4_jpg	45	4	Enemy		Enemy	Single	firefu	1000	skill_xy4	Damage			50	2	9000	3100	1500	160
+25	SkillName_25	SkillDescribe_25	skill_xy5_jpg	70	5	Enemy		Enemy	All	firefu	1000	skill_xy5	Damage			100	1.05	11000	3100	1500	320
+1001	火麒麟技能	SkillDescribe_1001		0	1	Enemy		Enemy	All		1000	fireboom	Damage			100		1300			
+1002	尹志平技能	SkillDescribe_1001	skill_xy5_jpg	0	1	Enemy		Enemy	Single		1000	jian	Damage			10000		1000			
+1003	世界boss普攻	SkillDescribe_1001	skill_xy5_jpg	0	1	Enemy		Enemy	Single		1000	jian	Damage			100		800			
+1004	火麒麟空技能	SkillDescribe_1001		0	2	SelfAndAlias		SelfAndAlias	Single		1000		Damage			0	0	60000000	0	0	0
+5001	SkillName_5001	SkillDescribe_5001	skill_xy3_jpg	0	1	Enemy		Enemy	All		1000	skill_lei	Damage			105	1	7600	10000	2000	300
+5002	SkillName_5002	SkillDescribe_5002	skill_xy4_jpg	0	1	Group		Group	All		1000		Buff		1	105	1	10000	50000	10000	5000
+5003	SkillName_5003	SkillDescribe_5003	skill_xy5_jpg	0	1	Group		Group	All		1000		Buff		2	105	1	10000	100000	20000	8000
+5004	SkillName_5004	SkillDescribe_5004	skill_xy5_jpg	0	3	Enemy		Enemy	Single		1000	enemy	Buff	11		100	0	60000	0	0	0
+5005	SkillName_5005	SkillDescribe_5005	skill_xy5_jpg	0	2	Group		Group	All		1000		Buff		12	110	2	10000	100000	20000	8000
+5006	冰魂回血		skill_xy3_jpg	0	1	Group		Group	All		1000	skill_xy3	Heal			1000000	0	10000000	0	0	0
+5007	经脉副本boss空技能			0	1	SelfAndAlias		SelfAndAlias	Single		1000		Damage			0	0	600000	0	0	0
+5008	SkillName_5008	SkillDescribe_5008	skill_xy5_jpg	0	3	Enemy		Enemy	Single		1000	enemy	Buff	13		100	0	60000	0	0	0
+5009	剧情副本boss空技能			0	1	SelfAndAlias		SelfAndAlias	Single		1000		Damage			0	0	600000	0	0	0
+5010	SkillName_5010	SkillDescribe_5010	skill_xy5_jpg	0	3	Enemy		Enemy	Single		1000	enemy	Buff	14		100	0	3000	0	0	0
+5011	SkillName_5011	SkillDescribe_5011	skill_xy5_jpg	0	1	Group		Group	All		1000		Buff		15	5	0.85	5000	100000	20000	8500
+5012	SkillName_5012	SkillDescribe_5012	skill_xy5_jpg	0	1	Group		Group	All		1000		Buff		16	10	0.6	5000	100000	20000	8500
+5013	SkillName_5013	SkillDescribe_5013	skill_xy3_jpg	0	1	Enemy		Enemy	All		1000		Damage			105	1	800	10000	2000	1000
+5014	SkillName_5014	SkillDescribe_5014	skill_xy3_jpg	0	1	Enemy		Enemy	All		1000		Damage			105	1	800	10000	2000	500
+5015	SkillName_5015	SkillDescribe_5015	skill_xy3_jpg	0	1	Enemy		Enemy	All		1000	Damage			105	1	800	10000	2000	300	

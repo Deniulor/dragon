@@ -16,7 +16,7 @@ module dragon.battle0 {
 			let skilldata = kernel.data.group('skill').find(skillid);
 			this.skilldata = skilldata;
 
-			this.selector = new Selector(skilldata.SelectTarget, skilldata.SelectStrategy, skilldata.CastTarget, skilldata.SelectArea, skilldata.SelectParam);
+			this.selector = new Selector(skilldata.SelectTarget, skilldata.SelectStrategy, skilldata.CastTarget, skilldata.SelectType);
 			this.settler = SettlerFactory.create(skilldata.SettleType, this);
 			this.cd = 0;
 		}

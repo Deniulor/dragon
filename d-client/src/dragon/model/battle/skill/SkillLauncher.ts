@@ -43,15 +43,11 @@ module dragon.battle0 {
 					select = select0;
 				}
 			}
-			return skill && skill.cast(select);
-		}
+			if (!skill)
+				return false;
 
-		public resetCD() {
-			this.cd = kernel.data.factor("ATKCD", 1);
-		}
-
-		public isInCD() {
-			return this.cd > 0;
+			this.cd = kernel.data.factor("ATKCD", 1)
+			return skill.cast(select);
 		}
 
 		public clearSkills() {

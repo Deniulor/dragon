@@ -27,9 +27,9 @@ module dragon.battle0 {
 				return;
 			}
 			var frmx = this.skill.unit.x;
-			var frmy = this.skill.unit.y - this.skill.unit.view.height / 2;
+			var frmy = this.skill.unit.y;
 			var tox = this.selected.x;
-			var toy = this.selected.y - this.skill.unit.view.height / 2;
+			var toy = this.selected.y;
 			this.mc = mc;
 			this.mc.x = frmx;
 			this.mc.y = frmy;

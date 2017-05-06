@@ -1,13 +1,9 @@
 module dragon.battle0 {
 	export class Monster extends Unit {
-		public constructor(battle: Battle) {
-			super(battle);
-
+		public initData() {
 			let dmonster = kernel.data.group('monster').rand();
 			this.$id = dmonster.id;
-			this.name = dmonster.Name;
-			this.$view = new view.Unit(this, battle);
-			this.$view.height /= 3;
+			this.$name = dmonster.Name;
 
 			for (var i = 0; i < dmonster.Skill.length; ++i) {
 				this.skillLauncher.addSkill(new Skill(this, dmonster.Skill[i], dmonster.Level));
@@ -20,8 +16,7 @@ module dragon.battle0 {
 			this.attr(enums.Attribute.Dodge, dmonster.Dodge);
 			this.attr(enums.Attribute.Critical, dmonster.Critical);
 
-			this.$hp = this.attr(enums.Attribute.MaxHP);
-			this.$view.onHpChanged();
+			this.$view.height = 160;
 		}
 	}
 }

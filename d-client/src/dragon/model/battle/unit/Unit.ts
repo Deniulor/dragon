@@ -12,8 +12,9 @@ module dragon.battle0 {
 		public get y(): number { return this.$view.pos.y; }
 
 		protected $id: number;
-		protected name: string;
 		public get id() { return this.$id }
+		protected $name: string;
+		public get name(): string { return this.$name }
 		private $battle: Battle;
 		public get battle() { return this.$battle }
 
@@ -28,12 +29,26 @@ module dragon.battle0 {
 		protected $attrs: { [k: number]: number }; // 属性列表
 
 
-		constructor(battle: Battle) {
+		constructor(battle: Battle, param?: any) {
 			this.$battle = battle;
 			this.skillLauncher = new SkillLauncher(this);
+			this.$view = new view.Unit(this, battle);
+
+			this.init();
+		}
+
+		public init() {
+			this.skillLauncher.clearSkills();
 			this.$attrs = {};
 			this.buffs = {};
+
+
+			this.initData();
+			this.$hp = this.attr(enums.Attribute.MaxHP);
+			this.$view.init();
 		}
+
+		public abstract initData();
 
 		/** 
 		 * attr 属性类型
@@ -94,6 +109,11 @@ module dragon.battle0 {
 				}
 			}
 			this.$hp = Math.min(this.$hp, this.attr(enums.Attribute.MaxHP));
+		}
+
+		public reborn() {
+			this.hp = this.attr(enums.Attribute.MaxHP);
+			this.$view.onBorn();
 		}
 
 		public damage(damage: number, source: battle0.Unit) {

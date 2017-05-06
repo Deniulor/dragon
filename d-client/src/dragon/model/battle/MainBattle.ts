@@ -4,11 +4,11 @@ module dragon.battle0 {
 			super();
 		}
 
-		protected initSelf(): Unit {
+		protected createSelf(): Unit {
 			return new Player(this);
 		}
 
-		protected initOppo(): Array<Unit> {
+		protected createOppo(): Array<Unit> {
 			let list = new Array<Unit>();
 			for (let i = 0; i < 3; ++i) {
 				list.push(new Monster(this));
@@ -18,9 +18,16 @@ module dragon.battle0 {
 
 		protected onWin() {
 			console.log('Winner!!!');
+			for (let i = 0; i < this.oppos.length; ++i) {
+				this.oppos[i].init();
+			}
+			this.start();
 		}
+
 		protected onLost() {
 			console.log('Lost!!!');
+			this.self.init();
+			this.start();
 		}
 
 		public unload() {

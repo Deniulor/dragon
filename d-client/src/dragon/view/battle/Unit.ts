@@ -15,13 +15,13 @@ module dragon.view {
 		public get pos(): egret.Point {
 			if (!this.$pos) {
 				let p = new egret.Point(this.x + this.width / 2, this.y + this.height / 2);
-				let cmpt = this.parent;
-				while (cmpt && cmpt != this.battle) {
-					p.x += cmpt.x;
-					p.y += cmpt.y;
-					cmpt = cmpt.parent;
+				let parent = this.parent;
+				while (parent && parent != this.battle) {
+					p.x += parent.x;
+					p.y += parent.y;
+					parent = parent.parent;
 				}
-				this.$pos = cmpt == this.battle ? p : null;
+				this.$pos = parent == this.battle ? p : null;
 			}
 			return this.$pos;
 		}
@@ -42,11 +42,14 @@ module dragon.view {
 			this.addChild(this.effects);
 		}
 
+		public init() {
+			this.visible = true;
+			this.lbl_name.text = this.unit.name;
+			this.onHpChanged();
+		}
+
 		public play(skill: string) {
-			if (!this.battle.effectLayer) {
-				return;
-			}
-			kernel.effect.once(skill, this.battle.effectLayer, this.pos.x, this.pos.y); // 被击特效
+			kernel.effect.once(skill, this.battle.effectLayer, this.pos.x, this.pos.y + 75 /*龙女素材偏移了*/); // 播放特效
 		}
 
 		public addBuff(buff: battle0.Buff) {
@@ -77,7 +80,7 @@ module dragon.view {
 			this.$pos = null;
 		}
 
-		public onReborn() {
+		public onBorn() {
 			this.effects.removeChildren();
 			this.visible = true;
 		}

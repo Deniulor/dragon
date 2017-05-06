@@ -12,7 +12,7 @@ module dragon.battle0 {
         private $view: view.Battle;
         public get view() { return this.$view; }
 
-        private self: Unit;
+        protected self: Unit;
         protected oppos: Array<Unit> = [];
         protected allies: Array<Unit> = [];
         protected $all: Array<Unit> = [];
@@ -98,10 +98,10 @@ module dragon.battle0 {
         private inited: boolean = false;
         public load(param: any) {
 
-            this.self = this.initSelf();
+            this.self = this.createSelf();
             this.addUnit(this.self, Group.Self);
 
-            this.oppos = this.initOppo();
+            this.oppos = this.createOppo();
             for (let i = 0; i < this.oppos.length; ++i) {
                 this.addUnit(this.oppos[i], Group.Oppo);
             }
@@ -120,8 +120,8 @@ module dragon.battle0 {
             this.bullets.push(bullet);
         }
 
-        protected abstract initSelf(): Unit;
-        protected abstract initOppo(): Array<Unit>;
+        protected abstract createSelf(): Unit;
+        protected abstract createOppo(): Array<Unit>;
 
         protected abstract onWin();
         protected abstract onLost();

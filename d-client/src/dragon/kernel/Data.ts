@@ -130,6 +130,7 @@ module dragon.kernel0 {
 
 			let result: { [k: string]: any } = {};
 			let idindex = fields['id'].index;
+			this.$length = datas.length;
 			for (let i = 0; i < datas.length; ++i) {
 				let curid = datas[i][idindex];
 				result[curid] = { id: curid };//初始化对象表
@@ -144,7 +145,7 @@ module dragon.kernel0 {
 						let cur_value = [];
 						let arr = cur_data[field.index].split(';');
 						for (let j = 0; j < arr.length; ++j) {
-							cur_value.push(field.parser(arr[i]));
+							cur_value.push(field.parser(arr[j]));
 						}
 						// result[cur_id]-> field.name = cur_value;
 						result[cur_data[idindex]][field.name] = cur_value;

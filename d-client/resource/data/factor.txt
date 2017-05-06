@@ -2,3 +2,4 @@
 number	number	string
 id	Value	Remarks
 ATKCD	1	攻击间隔
+EffectMax	10	特效叠加层数
