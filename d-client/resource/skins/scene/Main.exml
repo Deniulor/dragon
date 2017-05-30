@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="main" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="640">
-	<e:Image source="bg_png" width="640" height="1136" y="0" />
-	<e:Component id="battle" left="0" right="0" top="150" bottom="426" skinName="Battle" />
+<e:Skin class="main" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:view="dragon.view.*" width="640">
+	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xc0c0c0" />
+	<e:Image source="bg_png" width="640" height="1136" y="0" visible="false" />
+	<e:Component id="battle" skinName="Battle" anchorOffsetY="0" height="266" width="640" x="0" y="72" />
+	<e:Component id="recorder" width="640" x="0" height="400" y="450" skinName="Recorder"/>
 </e:Skin>

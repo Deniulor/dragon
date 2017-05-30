@@ -5,7 +5,7 @@
 			"name": "loading"
 		},
 		{
-			"keys": "general_txt,factor_txt,attribute_txt,buff_txt,monster_txt,skill_txt,unit_txt",
+			"keys": "general_txt,factor_txt,attribute_txt,buff_txt,monster_txt,skill_txt,unit_txt,language_txt",
 			"name": "data"
 		},
 		{
@@ -527,6 +527,11 @@
 			"url": "data/unit.txt",
 			"type": "text",
 			"name": "unit_txt"
+		},
+		{
+			"url": "data/language.txt",
+			"type": "text",
+			"name": "language_txt"
 		}
 	]
 }

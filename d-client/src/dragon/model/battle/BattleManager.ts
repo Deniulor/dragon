@@ -2,6 +2,7 @@ module dragon {
 	class BattleManager {
 
 		public $current: battle0.Battle;
+		public $recorder: battle0.Recorder;
 
 		public get current() {
 			return this.$current;
@@ -23,6 +24,13 @@ module dragon {
 
 		public enterMain(): battle0.Battle {
 			return this.enter(battle0.MainBattle);
+		}
+
+		public record(type: string, ...param: any[]): void {
+			if (!this.$recorder) {
+				this.$recorder = new battle0.Recorder();
+			}
+			this.$recorder.addRecord(type, param);
 		}
 	}
 	export const battle: BattleManager = new BattleManager();

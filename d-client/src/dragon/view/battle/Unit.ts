@@ -7,7 +7,7 @@ module dragon.view {
 		private effects: egret.DisplayObjectContainer;
 		private buffLayer: egret.DisplayObjectContainer;
 
-		private hp_rect: eui.Rect;
+		private rct_hp: eui.Rect;
 		private lbl_hp: eui.Label;
 		private lbl_name: eui.Label;
 
@@ -31,7 +31,7 @@ module dragon.view {
 			this.unit = unit;
 			this.battle = battle.view;
 
-			this.skinName = "resource/skins/battle/Avatar.exml";
+			this.skinName = "resource/skins/battle/Unit.exml";
 
 			this.buffLayer = new egret.DisplayObjectContainer();
 			this.buffLayer.x = this.width / 2;
@@ -65,13 +65,8 @@ module dragon.view {
 		}
 
 		public onHpChanged() {
-			this.lbl_hp.text = Math.max(Math.floor(this.unit.hp), 0) + "/" + Math.floor(this.unit.attr(enums.Attribute.MaxHP));
-			let drop = 1 - Math.max(this.unit.hp / this.unit.attr(enums.Attribute.MaxHP), 0);
-			if (this.height / this.width >= 0.95) {
-				this.hp_rect.top = drop * this.hp_rect.height;
-			} else {
-				this.hp_rect.left = drop * this.hp_rect.width;
-			}
+			this.lbl_hp.text = Math.max(Math.floor(this.unit.hp), 0) + "/" + Math.floor(this.unit.attr(enums.Attribute.MaxHP))
+			egret.Tween.get(this.rct_hp).to({ scaleX: Math.max(this.unit.hp / this.unit.attr(enums.Attribute.MaxHP), 0) }, 300)
 		}
 
 		public onDie() {

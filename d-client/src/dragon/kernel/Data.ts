@@ -4,7 +4,7 @@ module dragon.kernel0 {
 		group(name: string): IGroup;
 		factor(name: string, defaultvalue?: number): number;
 		general(name: string, defaultvalue?: string): string;
-		language(name: string): string;
+		language(name: string, ...param: any[]): Array<egret.ITextElement>;
 	}
 	export class Data implements IData {
 		private groups: { [k: string]: Group } = {};
@@ -44,16 +44,15 @@ module dragon.kernel0 {
 			else
 				return defaultvalue;
 		}
-		public language(name: string): string {
+		public language(name: string, ...param: any[]): Array<egret.ITextElement> {
 			var data = this.group('language').find(name);
-			if (data)
-				return data.CN;
-			else {
+			if (!data) {
 				if (DEBUG) {
 					console.error("[legend.data] language [%s] not found", name);
 				}
-				return '';
+				return [];
 			}
+			return (new egret.HtmlTextParser).parser(utils.string.format(data.CN, param));
 		}
 	}
 

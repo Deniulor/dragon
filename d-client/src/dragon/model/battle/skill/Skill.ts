@@ -49,15 +49,7 @@ module dragon.battle0 {
 				return false;
 			}
 			this.resetCD();
-			// 发射弹幕
-			var bullet = this.bullet;
-			if (!bullet) {
-				this.settle(select.selected, select.caston);//当即结算
-			} else {
-				this.unit.battle.addBullet(new Bullet(this, select.selected, select.caston));
-			}
-			// console.log("[cast] time:%s, group:%s, caster:%s, loc:(%s, %s), skill:%s, seed:%s", //
-			// 	this.creature.battle['time'], this.creature.Group, this.creature.id, this.creature.x, this.creature.y, this.skilldata.id, this.creature.battle["seed"]);
+			this.settle(select.selected, select.caston);//当即结算
 			return true;
 		}
 
@@ -66,22 +58,14 @@ module dragon.battle0 {
 			if (this.unit.hp < 0) {
 				return;
 			}
-			// 播放特效
-			this.settleEffect && target.view.play(this.settleEffect);
 
-			var settles = [];
 			// 每个单位进行结算
 			for (var i = 0; i < caston.length; ++i) {
 				var tar = caston[i];
 				if (tar.dead) {
 					continue;
 				}
-				var value = this.settler.settle(this.unit, tar);
-				settles.push({
-					victim: tar.id, // 受攻击人
-					vgroup: tar.group, // 受攻击人阵营
-					value: value // 伤害
-				});
+				this.settler.settle(this.unit, tar);
 			}
 		}
 

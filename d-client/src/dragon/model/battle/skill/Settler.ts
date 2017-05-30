@@ -39,6 +39,7 @@ module dragon.battle0 {
                 dmg = Math.floor(dmg);
                 tar.damage(dmg, me);
                 tar.view.onDamage(me, dmg, isCritical);
+                battle.record("Damage", me.name, me.color, this.skill.skilldata.Name, tar.name, tar.color, isCritical ? dmg + '!' : dmg);
                 return dmg;
             }
         }

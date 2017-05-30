@@ -12,9 +12,9 @@ module dragon.battle0 {
         private $view: view.Battle;
         public get view() { return this.$view; }
 
-        protected self: Unit;
-        protected oppos: Array<Unit> = [];
-        protected allies: Array<Unit> = [];
+        protected player: Unit;
+        protected pet: Unit;
+        protected monster: Unit;
         protected $all: Array<Unit> = [];
         public get all(): Array<Unit> { return this.$all };
         protected bullets: Array<Bullet> = [];
@@ -57,7 +57,7 @@ module dragon.battle0 {
             }
 
 
-            if (this.self.dead) {
+            if (this.player.dead) {
                 this.lost();
             }
             for (var i = 0; i < this.$all.length; ++i) {
@@ -73,16 +73,11 @@ module dragon.battle0 {
 
 
         public onDie(unit: Unit) {
-            if (this.self == unit) {
+            if (this.player == unit) {
                 return this.lost();
+            } else if (this.monster == unit) {
+                this.win(); // 敌方阵亡
             }
-
-            for (let i = 0; i < this.oppos.length; ++i) {
-                if (!this.oppos[i].dead) {
-                    return;
-                }
-            }
-            this.win(); // 敌方全体阵亡
         }
 
         public lost() {
@@ -97,19 +92,17 @@ module dragon.battle0 {
 
         private inited: boolean = false;
         public load(param: any) {
+            this.addUnit(this.player = this.createPlayer(), enums.Group.Player);
 
-            this.self = this.createSelf();
-            this.addUnit(this.self, Group.Self);
+            this.addUnit(this.monster = this.createMonster(), enums.Group.Monster);
 
-            this.oppos = this.createOppo();
-            for (let i = 0; i < this.oppos.length; ++i) {
-                this.addUnit(this.oppos[i], Group.Oppo);
-            }
+            this.addUnit(this.pet = this.createPet(), enums.Group.Pet);
 
             this.inited = true;
         }
 
-        private addUnit(u: Unit, g: Group) {
+        private addUnit(u: Unit, g: enums.Group) {
+            if(!u) return
             u.group = g;
             this.$all.push(u);
             this.$view.addUnit(u);
@@ -120,8 +113,9 @@ module dragon.battle0 {
             this.bullets.push(bullet);
         }
 
-        protected abstract createSelf(): Unit;
-        protected abstract createOppo(): Array<Unit>;
+        protected abstract createPlayer(): Unit;
+        protected abstract createPet(): Unit;
+        protected abstract createMonster(): Unit;
 
         protected abstract onWin();
         protected abstract onLost();

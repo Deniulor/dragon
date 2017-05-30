@@ -1,5 +1,4 @@
 module dragon.tools {
-
     export enum Platform {
         None, PC
     }

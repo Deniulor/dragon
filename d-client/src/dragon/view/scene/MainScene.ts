@@ -2,6 +2,7 @@ module dragon.view {
 	class MainScene extends Scene {
 
 		private battle: Battle;
+		private recorder: egret.DisplayObjectContainer;
 
 		public constructor() {
 			super();
@@ -9,8 +10,14 @@ module dragon.view {
 
 		public init() {
 			this.skinName = 'resource/skins/scene/Main.exml';
-			this.percentHeight = 100;
-			this.percentWidth = 100;
+
+			let recorder = new Recorder();
+			recorder.x = this.recorder.x;
+			recorder.y = this.recorder.y;
+			recorder.width = this.recorder.width;
+			recorder.height = this.recorder.height;
+			this.recorder.visible = false;
+			this.addChild(this.recorder = recorder)
 		}
 
 		public afterLoaded() {
@@ -24,11 +31,12 @@ module dragon.view {
 				return;
 			}
 			if (this.battle) {
+				battle.x = this.battle.x;
+				battle.y = this.battle.y;
+				battle.width = this.battle.width;
+				battle.height = this.battle.height;
 				this.removeChild(this.battle);
 			}
-			//left="0" right="0" top="150" bottom="426"
-			battle.left = battle.right = 0;
-			battle.top = 160, battle.bottom = 426;
 			this.battle = battle;
 			this.addChild(this.battle);
 		}

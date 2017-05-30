@@ -1,35 +1,35 @@
-id	¼¼ÄÜÃû³Æ	¼¼ÄÜÃèÊö	Í¼±ê	Ñ§Ï°µÈ¼¶	Ê¹ÓÃÓÅÏÈ¼¶	¼ìË÷ÓÃÄ¿±ê	¼ìË÷²ßÂÔ	ÊÜ·¨ÊõÓ°ÏìµÄÄ¿±ê	Ñ¡ÔñÆ÷-µ¥Ìå/ÈºÌå	µ¯µÀ	µ¯µÀËÙ¶È/Ã¿Ãë	½áËãÌØĞ§	½áËãÀàĞÍ	É¾³ıBuff-buffid	Ìí¼ÓBuff-buffid	1¼¶ÊôĞÔ	ÊıÖµÔöÁ¿	ÀäÈ´	1¼¶ÏûºÄÁ¿	ÏûºÄÔöÁ¿	Õ½Á¦ÌáÉı
+id	æŠ€èƒ½åç§°	æŠ€èƒ½æè¿°	å›¾æ ‡	å­¦ä¹ ç­‰çº§	ä½¿ç”¨ä¼˜å…ˆçº§	æ£€ç´¢ç”¨ç›®æ ‡	æ£€ç´¢ç­–ç•¥	å—æ³•æœ¯å½±å“çš„ç›®æ ‡	é€‰æ‹©å™¨-å•ä½“/ç¾¤ä½“	å¼¹é“	å¼¹é“é€Ÿåº¦/æ¯ç§’	ç»“ç®—ç‰¹æ•ˆ	ç»“ç®—ç±»å‹	åˆ é™¤Buff-buffid	æ·»åŠ Buff-buffid	1çº§å±æ€§	æ•°å€¼å¢é‡	å†·å´	1çº§æ¶ˆè€—é‡	æ¶ˆè€—å¢é‡	æˆ˜åŠ›æå‡
 number	string	string	string	number	number	string	string	string	string	string	number	string	string	list<number>	number	number	number	number	number	number	number
 id	Name	Describe	Icon	Require	Priority	SelectTarget	SelectStrategy	CastTarget	SelectType	Bullet	BulletSpeed	SettleEffect	SettleType	ClearBuff	Buff	Attr	AttrAdd	CD	Gold	GoldAdd	Power
-0	Ò°¹Ö¹¥»÷	SkillDescribe_1	item0004_jpg	0	1	Enemy		Enemy	Single		1000	enemy	Damage			100	1	800	3100	1500	20
-1	SkillName_1	SkillDescribe_1	skill_gm1_jpg	0	1	Enemy		Enemy	Single	fire	1000	skill_gm	Damage			100	1.2	900	3100	1500	20
-2	SkillName_2	SkillDescribe_2	skill_gm2_jpg	7	2	Enemy		Enemy	All		1000	skill_gm2	Damage			70	1.5	5500	3100	1500	40
-3	SkillName_3	SkillDescribe_3	skill_gm3_jpg	20	3	Enemy		Enemy	All		1000	skill_gm3	Damage			80	1.6	9000	3100	1500	80
-4	SkillName_4	SkillDescribe_4	skill_gm4_jpg	45	4	Enemy		Enemy	Single		1000	skill_ice	Damage			150	1.7	10000	3100	1500	160
-5	SkillName_5	SkillDescribe_5	skill_gm5_jpg	70	5	Enemy		Enemy	All	fire	1000	skill_gm5	Damage			200	1.8	13000	3100	1500	320
-11	SkillName_11	SkillDescribe_11	skill_tl1_jpg	0	1	Enemy		Enemy	Single		1000	skill_tl	Damage			100	1	1100	3100	1500	20
-12	SkillName_12	SkillDescribe_12	skill_tl2_jpg	7	2	Enemy		Enemy	All		1000	skill_tl1	Damage			138	1.2	5000	3100	1500	40
-13	SkillName_13	SkillDescribe_13	skill_tl3_jpg	20	3	Enemy		Enemy	All		1000	skill_tl5	Damage			70	0.85	9000	3100	1500	80
-14	SkillName_14	SkillDescribe_14	skill_tl4_jpg	45	4	Enemy		Enemy	Single		1000	skill_tl4	Damage			100	2	12000	3100	1500	160
-15	SkillName_15	SkillDescribe_15	skill_tl5_jpg	70	5	Enemy		Enemy	All		1000	skill_tl3	Damage			80	1.05	15000	3100	1500	320
-21	SkillName_21	SkillDescribe_21	skill_xy1_jpg	0	1	Enemy		Enemy	Single	firefu	1000	skill_xy1	Damage			100	1.05	1000	3100	1500	20
-22	SkillName_22	SkillDescribe_22	skill_xy2_jpg	7	2	Enemy		Enemy	All		1000	skill_xy2	Damage			138	1.05	4100	3100	1500	40
-23	SkillName_23	SkillDescribe_23	skill_xy3_jpg	20	3	SelfAndAlias	HpMin	SelfAndAlias	Single		1000	skill_xy3	Heal			300	3	7600	3100	1500	80
-24	SkillName_24	SkillDescribe_24	skill_xy4_jpg	45	4	Enemy		Enemy	Single	firefu	1000	skill_xy4	Damage			50	2	9000	3100	1500	160
-25	SkillName_25	SkillDescribe_25	skill_xy5_jpg	70	5	Enemy		Enemy	All	firefu	1000	skill_xy5	Damage			100	1.05	11000	3100	1500	320
-1001	»ğ÷è÷ë¼¼ÄÜ	SkillDescribe_1001		0	1	Enemy		Enemy	All		1000	fireboom	Damage			100		1300			
-1002	ÒüÖ¾Æ½¼¼ÄÜ	SkillDescribe_1001	skill_xy5_jpg	0	1	Enemy		Enemy	Single		1000	jian	Damage			10000		1000			
-1003	ÊÀ½çbossÆÕ¹¥	SkillDescribe_1001	skill_xy5_jpg	0	1	Enemy		Enemy	Single		1000	jian	Damage			100		800			
-1004	»ğ÷è÷ë¿Õ¼¼ÄÜ	SkillDescribe_1001		0	2	SelfAndAlias		SelfAndAlias	Single		1000		Damage			0	0	60000000	0	0	0
+0	æ™®é€šæ”»å‡»	SkillDescribe_1	item0004_jpg	0	1	Enemy		Enemy	Single		1000	enemy	Damage			100	1	800	3100	1500	20
+1	å¼“1	SkillDescribe_1	skill_gm1_jpg	0	1	Enemy		Enemy	Single	fire	1000	skill_gm	Damage			100	1.2	900	3100	1500	20
+2	å¼“2	SkillDescribe_2	skill_gm2_jpg	7	2	Enemy		Enemy	All		1000	skill_gm2	Damage			70	1.5	5500	3100	1500	40
+3	å¼“3	SkillDescribe_3	skill_gm3_jpg	20	3	Enemy		Enemy	All		1000	skill_gm3	Damage			80	1.6	9000	3100	1500	80
+4	å¼“4	SkillDescribe_4	skill_gm4_jpg	45	4	Enemy		Enemy	Single		1000	skill_ice	Damage			150	1.7	10000	3100	1500	160
+5	å¼“5	SkillDescribe_5	skill_gm5_jpg	70	5	Enemy		Enemy	All	fire	1000	skill_gm5	Damage			200	1.8	13000	3100	1500	320
+11	æ³•1	SkillDescribe_11	skill_tl1_jpg	0	1	Enemy		Enemy	Single		1000	skill_tl	Damage			100	1	1100	3100	1500	20
+12	æ³•2	SkillDescribe_12	skill_tl2_jpg	7	2	Enemy		Enemy	All		1000	skill_tl1	Damage			138	1.2	5000	3100	1500	40
+13	æ³•3	SkillDescribe_13	skill_tl3_jpg	20	3	Enemy		Enemy	All		1000	skill_tl5	Damage			70	0.85	9000	3100	1500	80
+14	æ³•4	SkillDescribe_14	skill_tl4_jpg	45	4	Enemy		Enemy	Single		1000	skill_tl4	Damage			100	2	12000	3100	1500	160
+15	æ³•5	SkillDescribe_15	skill_tl5_jpg	70	5	Enemy		Enemy	All		1000	skill_tl3	Damage			80	1.05	15000	3100	1500	320
+21	æˆ˜1	SkillDescribe_21	skill_xy1_jpg	0	1	Enemy		Enemy	Single	firefu	1000	skill_xy1	Damage			100	1.05	1000	3100	1500	20
+22	æˆ˜2	SkillDescribe_22	skill_xy2_jpg	7	2	Enemy		Enemy	All		1000	skill_xy2	Damage			138	1.05	4100	3100	1500	40
+23	æˆ˜3	SkillDescribe_23	skill_xy3_jpg	20	3	SelfAndAlias	HpMin	SelfAndAlias	Single		1000	skill_xy3	Heal			300	3	7600	3100	1500	80
+24	æˆ˜4	SkillDescribe_24	skill_xy4_jpg	45	4	Enemy		Enemy	Single	firefu	1000	skill_xy4	Damage			50	2	9000	3100	1500	160
+25	æˆ˜5	SkillDescribe_25	skill_xy5_jpg	70	5	Enemy		Enemy	All	firefu	1000	skill_xy5	Damage			100	1.05	11000	3100	1500	320
+1001	ç«éº’éºŸæŠ€èƒ½	SkillDescribe_1001		0	1	Enemy		Enemy	All		1000	fireboom	Damage			100		1300			
+1002	å°¹å¿—å¹³æŠ€èƒ½	SkillDescribe_1001	skill_xy5_jpg	0	1	Enemy		Enemy	Single		1000	jian	Damage			10000		1000			
+1003	ä¸–ç•Œbossæ™®æ”»	SkillDescribe_1001	skill_xy5_jpg	0	1	Enemy		Enemy	Single		1000	jian	Damage			100		800			
+1004	ç«éº’éºŸç©ºæŠ€èƒ½	SkillDescribe_1001		0	2	SelfAndAlias		SelfAndAlias	Single		1000		Damage			0	0	60000000	0	0	0
 5001	SkillName_5001	SkillDescribe_5001	skill_xy3_jpg	0	1	Enemy		Enemy	All		1000	skill_lei	Damage			105	1	7600	10000	2000	300
 5002	SkillName_5002	SkillDescribe_5002	skill_xy4_jpg	0	1	Group		Group	All		1000		Buff		1	105	1	10000	50000	10000	5000
 5003	SkillName_5003	SkillDescribe_5003	skill_xy5_jpg	0	1	Group		Group	All		1000		Buff		2	105	1	10000	100000	20000	8000
 5004	SkillName_5004	SkillDescribe_5004	skill_xy5_jpg	0	3	Enemy		Enemy	Single		1000	enemy	Buff	11		100	0	60000	0	0	0
 5005	SkillName_5005	SkillDescribe_5005	skill_xy5_jpg	0	2	Group		Group	All		1000		Buff		12	110	2	10000	100000	20000	8000
-5006	±ù»ê»ØÑª		skill_xy3_jpg	0	1	Group		Group	All		1000	skill_xy3	Heal			1000000	0	10000000	0	0	0
-5007	¾­Âö¸±±¾boss¿Õ¼¼ÄÜ			0	1	SelfAndAlias		SelfAndAlias	Single		1000		Damage			0	0	600000	0	0	0
+5006	å†°é­‚å›è¡€		skill_xy3_jpg	0	1	Group		Group	All		1000	skill_xy3	Heal			1000000	0	10000000	0	0	0
+5007	ç»è„‰å‰¯æœ¬bossç©ºæŠ€èƒ½			0	1	SelfAndAlias		SelfAndAlias	Single		1000		Damage			0	0	600000	0	0	0
 5008	SkillName_5008	SkillDescribe_5008	skill_xy5_jpg	0	3	Enemy		Enemy	Single		1000	enemy	Buff	13		100	0	60000	0	0	0
-5009	¾çÇé¸±±¾boss¿Õ¼¼ÄÜ			0	1	SelfAndAlias		SelfAndAlias	Single		1000		Damage			0	0	600000	0	0	0
+5009	å‰§æƒ…å‰¯æœ¬bossç©ºæŠ€èƒ½			0	1	SelfAndAlias		SelfAndAlias	Single		1000		Damage			0	0	600000	0	0	0
 5010	SkillName_5010	SkillDescribe_5010	skill_xy5_jpg	0	3	Enemy		Enemy	Single		1000	enemy	Buff	14		100	0	3000	0	0	0
 5011	SkillName_5011	SkillDescribe_5011	skill_xy5_jpg	0	1	Group		Group	All		1000		Buff		15	5	0.85	5000	100000	20000	8500
 5012	SkillName_5012	SkillDescribe_5012	skill_xy5_jpg	0	1	Group		Group	All		1000		Buff		16	10	0.6	5000	100000	20000	8500

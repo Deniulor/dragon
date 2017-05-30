@@ -1,9 +1,4 @@
 module dragon.battle0 {
-	// 阵营
-	export enum Group {
-		None, Self, Oppo, Allies
-	}
-
 	export abstract class Unit {
 
 		protected $view: view.Unit;
@@ -15,10 +10,12 @@ module dragon.battle0 {
 		public get id() { return this.$id }
 		protected $name: string;
 		public get name(): string { return this.$name }
+		public $color: string = '#747474'
+		public get color(): string { return this.$color }
 		private $battle: Battle;
 		public get battle() { return this.$battle }
 
-		public group: battle0.Group;
+		public group: enums.Group;
 		protected $hp;
 		public get hp() { return this.$hp }
 		public set hp(value: number) { this.$hp = value; this.$view.onHpChanged() }
@@ -135,8 +132,8 @@ module dragon.battle0 {
 		public isFriend(ch: Unit) {
 			if (this.group == ch.group)
 				return true;
-			return (this.group == Group.Self && ch.group == Group.Allies)
-				|| (this.group == Group.Allies && ch.group == Group.Self);
+			return (this.group == enums.Group.Player && ch.group == enums.Group.Pet)
+				|| (this.group == enums.Group.Pet && ch.group == enums.Group.Player);
 		}
 
 		public update(dt: number): void {
