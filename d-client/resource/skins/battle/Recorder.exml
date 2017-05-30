@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="Recorder" width="400" height="300" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-    <e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff" />
-	<e:Scroller left="0" right="0" top="0" bottom="0">
-		<e:Label id="lbl_records" text="" left="0" right="0" top="0" bottom="0" textColor="0x747474" textAlign="left" verticalAlign="middle" backgroundColor="0xf90202"/>
+    <e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff"/>
+	<e:Scroller left="0" right="0" top="0" bottom="0" scrollPolicyH="off">
+		<e:Group>
+            <e:Label id="lbl_records" textColor="0x747474" size="20"/>
+        </e:Group>
 	</e:Scroller>
 </e:Skin>

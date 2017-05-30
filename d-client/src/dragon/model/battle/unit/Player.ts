@@ -4,6 +4,7 @@ module dragon.battle0 {
 			let dunit = kernel.data.group('unit').rand();
 			this.$id = dunit.id;
 			this.$name = dunit.Name;
+			this.$color = '#FF7100';
 
 			let level = Math.floor(Math.random() * 15) + 1;
 			for (var i = 0; i < dunit.Skill.length; ++i) {

@@ -4,6 +4,7 @@ module dragon.battle0 {
 			let dmonster = kernel.data.group('monster').rand();
 			this.$id = dmonster.id;
 			this.$name = dmonster.Name;
+			this.$color = '#9840BE';
 
 			for (var i = 0; i < dmonster.Skill.length; ++i) {
 				this.skillLauncher.addSkill(new Skill(this, dmonster.Skill[i], dmonster.Level));
