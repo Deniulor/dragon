@@ -1,6 +1,6 @@
-﻿id	UnitId	等级	升级经验	生命	攻击	防御	命中	闪避	暴击	抗暴
+﻿id	UnitId	等级	升级经验	生命	力量	防御	命中	闪避	暴击	抗暴
 number	number	number	number	number	number	number	number	number	number	number
-id	UnitId	Lv	Exp	MaxHP	ATK	DEF	Hit	Dodge	Critical	Tenacity
+id	UnitId	Lv	Exp	MaxHP	STR	DEF	Hit	Dodge	Critical	Tenacity
 10010001	1001	1	3570	605	104	38	139	32	46	139
 10010002	1001	2	3910	626	108	39	144	33	48	144
 10010003	1001	3	4278	648	112	41	149	34	50	149

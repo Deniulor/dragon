@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="Skill" width="80" height="20" xmlns:e="http://ns.egret.com/eui">
-    <e:Rect id="cd_bg" bottom="0" left="0" top="0" right="0" strokeColor="0x000000" strokeWeight="0" ellipseWidth="10" fillColor="0x878787"/>
-    <e:Rect id="cd" bottom="0" left="0" top="0" right="26" strokeColor="0x000000" strokeWeight="0" ellipseWidth="10" height="30" fillColor="0x2fafad"/>
-    <e:Rect id="border" bottom="-1" left="-1" top="-1" right="-1" fillColor="0xCC4A41" strokeColor="0x000000" strokeWeight="2" ellipseWidth="10" fillAlpha="0"/>
-</e:Skin>

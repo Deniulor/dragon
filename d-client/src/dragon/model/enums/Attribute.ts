@@ -2,7 +2,7 @@ module dragon.enums {
 	export enum Attribute {
 		None, // 无
 		MaxHP, // 最大生命值
-		ATK, // 攻击
+		STR, // 力量
 		DEF, // 防御
 		RGS, // 魔防
 		Hit, // 命中

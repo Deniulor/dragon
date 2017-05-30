@@ -13,7 +13,7 @@ module dragon.battle0 {
 
 			let dattr = kernel.data.group('attribute').find(dunit.id * 10000 + level);
 			this.attr(enums.Attribute.MaxHP, dattr.MaxHP);
-			this.attr(enums.Attribute.ATK, dattr.ATK);
+			this.attr(enums.Attribute.STR, dattr.STR);
 			this.attr(enums.Attribute.DEF, dattr.DEF);
 			this.attr(enums.Attribute.Hit, dattr.Hit);
 			this.attr(enums.Attribute.Dodge, dattr.Dodge);

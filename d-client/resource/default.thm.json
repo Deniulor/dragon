@@ -5,7 +5,6 @@
     "resource/skins/battle/Unit.exml",
     "resource/skins/battle/Battle.exml",
     "resource/skins/battle/Recorder.exml",
-    "resource/skins/battle/Skill.exml",
     "resource/skins/panel/Login.exml",
     "resource/skins/scene/Main.exml"
   ]

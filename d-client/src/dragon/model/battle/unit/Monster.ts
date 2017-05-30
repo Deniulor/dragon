@@ -11,7 +11,7 @@ module dragon.battle0 {
 			}
 
 			this.attr(enums.Attribute.MaxHP, dmonster.MaxHP);
-			this.attr(enums.Attribute.ATK, dmonster.ATK);
+			this.attr(enums.Attribute.STR, dmonster.STR);
 			this.attr(enums.Attribute.DEF, dmonster.DEF);
 			this.attr(enums.Attribute.Hit, dmonster.Hit);
 			this.attr(enums.Attribute.Dodge, dmonster.Dodge);

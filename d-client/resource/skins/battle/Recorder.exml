@@ -3,7 +3,7 @@
     <e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff"/>
 	<e:Scroller left="0" right="0" top="0" bottom="0" scrollPolicyH="off">
 		<e:Group>
-            <e:Label id="lbl_records" textColor="0x747474" size="20"/>
+            <e:Label id="lbl_records" textColor="0x747474" size="20" lineSpacing="7"/>
         </e:Group>
 	</e:Scroller>
 </e:Skin>

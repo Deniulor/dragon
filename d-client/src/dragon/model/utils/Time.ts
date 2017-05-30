@@ -1,4 +1,4 @@
-module dragon.uitls {
+module dragon.utils {
 	class Time {
 		public init() {
 			//和服务端时间同步
@@ -23,17 +23,15 @@ module dragon.uitls {
 			}
 		}
 
-		public toTimeHour(itl: number, isDate: boolean = true): string {
-			var str = '';
-			if (itl > this.TimeHour) {
-				str += Math.floor(itl / this.TimeHour) + ':';
-				itl = itl - Math.floor(itl / this.TimeHour) * this.TimeHour;
-			}
-			if (itl > this.TimeMin || itl) {
-				str += ('00' + Math.floor(itl / this.TimeMin)).slice(-2) + ':';
-				itl = itl - Math.floor(itl / this.TimeMin) * this.TimeMin;
-			}
-			str += ('00' + itl).slice(-2);
+		public toTimeHour(itl: number): string {
+			//时
+			let str = ('00' + Math.floor(itl / this.TimeHour)).slice(-2) + ':';
+			itl = itl % this.TimeHour;
+			//分
+			str += ('00' + Math.floor(itl / this.TimeMin)).slice(-2) + ':';
+			itl = itl % this.TimeMin;
+			//秒
+			str += ('00' + Math.floor(itl)).slice(-2);
 			return str;
 		}
 

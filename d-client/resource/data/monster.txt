@@ -1,6 +1,6 @@
-﻿id	怪物名称	等级	生命	攻击	防御	命中	闪避	暴击	抗暴	技能
+﻿id	怪物名称	等级	生命	力量	防御	命中	闪避	暴击	抗暴	技能
 number	string	number	number	number	number	number	number	number	number	list<number>
-id	Name	Level	MaxHP	ATK	DEF	Hit	Dodge	Critical	Tenacity	Skill
+id	Name	Level	MaxHP	STR	DEF	Hit	Dodge	Critical	Tenacity	Skill
 100001	小恐龙	5	8364	81	10	216	3	5	216	0
 100002	火恐龙	10	8550	84	10	224	6	12	224	0
 100003	喷火龙	15	14802	87	10	232	7	13	232	0

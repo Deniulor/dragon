@@ -23,7 +23,7 @@ module dragon.battle0 {
                 super(skill);
             }
             public settle(me: Unit, tar: Unit) {
-                var dmg = (me.attr(enums.Attribute.ATK) - (tar.attr(enums.Attribute.DEF) || 0)) * this.skill.strength;
+                var dmg = (me.attr(enums.Attribute.STR) - (tar.attr(enums.Attribute.DEF) || 0)) * this.skill.strength;
                 dmg = dmg <= 0 ? 1 : dmg;
                 var isCritical = false;
                 var isHit = me.hit(tar);
@@ -49,7 +49,7 @@ module dragon.battle0 {
                 super(skill);
             }
             public settle(me: Unit, tar: Unit) {
-                var heal = me.attr(enums.Attribute.ATK) * this.skill.strength;
+                var heal = me.attr(enums.Attribute.STR) * this.skill.strength;
                 heal = Math.floor(heal);
                 tar.heal(heal);
                 tar.view.onHeal(heal);
