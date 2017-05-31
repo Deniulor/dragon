@@ -35,7 +35,6 @@ module dragon.battle0 {
                 } else {
                     dmg = 0; //Miss
                 }
-                dmg *= 1 + (me.attr(enums.Attribute.Damage) - tar.attr(enums.Attribute.Reduction)) / 100;
                 dmg = Math.floor(dmg);
                 tar.damage(dmg, me);
                 tar.view.onDamage(me, dmg, isCritical);

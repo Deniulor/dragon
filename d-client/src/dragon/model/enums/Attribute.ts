@@ -1,23 +1,28 @@
 module dragon.enums {
 	export enum Attribute {
 		None, // 无
-		MaxHP, // 最大生命值
-		STR, // 力量
-		DEF, // 防御
-		RGS, // 魔防
-		Hit, // 命中
-		Dodge, // 闪避
-		Critical, // 暴击
-		Tenacity, // 暴抗
-		RNG, // 攻击距离
-		SPD,// 移动速度
 
-		//特殊属性，战斗计算时使用
-		Damage, // 伤害加成
-		Reduction, // 减伤
-		HitPro, //命中概率
-		DodgePro, //闪避概率
-		CriticalPro, //暴击概率
-		TenacityPro, //暴抗概率
+		STR, //	力量：选择近战武器时增加基础攻击
+		DEX, //	敏捷：选择远程武器时增加基础攻击，并决定出手先后
+		INT, //	智力：增加魔法伤害和技能释放率
+		WILL, // 意志：增加暴击率和暴击伤害
+		LUCK, // 幸运：增加暴击率和掉宝率
+
+		HP, // HP：血量为空，战斗失败
+		MP,	// MP：释放法术时消耗
+
+		ATK, //	攻击：同时增加最小攻击和最大攻击
+		ATK_MIN, //	最小攻击：影响最低的物理伤害
+		ATK_MAX, //	最大攻击：影响最大的物理伤害
+		BAL, //	平衡：影响伤害的波动
+		CRT, //	暴击：影响暴击的概率
+		CRT_M, //	暴击倍数：影响暴击打出的伤害
+		DEF, //	防御：百分比降低伤害
+		PRT, //	护甲：直接降低伤害
+		PRT_I, //	无视护甲：无视对方直接降低伤害
+		MAGATK, //	魔法攻击：同时增加最小魔法攻击和最大魔法攻击
+
+		GODCHS, //	掉宝率：增加每次掉宝的品质及掉落概率
+		SKLCHS, //	施法概率：增加施法概率
 	}
 }

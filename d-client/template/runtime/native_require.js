@@ -42,6 +42,7 @@ var game_file_list = [
 	"bin-debug/dragon/model/utils/String.js",
 	"bin-debug/dragon/model/utils/Time.js",
 	"bin-debug/dragon/model/utils/Tools.js",
+	"bin-debug/dragon/view/battle/Attribute.js",
 	"bin-debug/dragon/view/battle/Battle.js",
 	"bin-debug/dragon/view/battle/Recorder.js",
 	"bin-debug/dragon/view/battle/Unit.js",

@@ -3,5 +3,6 @@
 	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xc0c0c0" />
 	<e:Image source="bg_png" width="640" height="1136" y="0" visible="false" />
 	<e:Component id="battle" skinName="Battle" anchorOffsetY="0" height="266" width="640" x="0" y="72" />
-	<e:Component id="recorder" width="640" x="0" height="400" y="450" skinName="Recorder"/>
+	<e:Component id="recorder" width="640" x="0" height="321" y="592" skinName="Recorder" anchorOffsetY="0"/>
+	<e:Component id="attribute" height="200" y="360" anchorOffsetY="0" left="0" right="0" skinName="Attribute"/>
 </e:Skin>

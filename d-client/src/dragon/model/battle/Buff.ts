@@ -56,7 +56,7 @@ module dragon.battle0 {
 				return false;
 			}
 			if (this.buffdata.HPCondition > 0) {
-				return this.creature.hp / this.creature.baseAttr(enums.Attribute.MaxHP) < this.buffdata.HPCondition / 100;
+				return this.creature.hp / this.creature.baseAttr(enums.Attribute.HP) < this.buffdata.HPCondition / 100;
 			}
 			return true;
 		}

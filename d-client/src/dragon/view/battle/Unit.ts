@@ -65,8 +65,8 @@ module dragon.view {
 		}
 
 		public onHpChanged() {
-			this.lbl_hp.text = Math.max(Math.floor(this.unit.hp), 0) + "/" + Math.floor(this.unit.attr(enums.Attribute.MaxHP))
-			egret.Tween.get(this.rct_hp).to({ scaleX: Math.max(this.unit.hp / this.unit.attr(enums.Attribute.MaxHP), 0) }, 300)
+			this.lbl_hp.text = Math.max(Math.floor(this.unit.hp), 0) + "/" + Math.floor(this.unit.attr(enums.Attribute.HP))
+			egret.Tween.get(this.rct_hp).to({ scaleX: Math.max(this.unit.hp / this.unit.attr(enums.Attribute.HP), 0) }, 300)
 		}
 
 		public onDie() {

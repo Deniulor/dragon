@@ -2,6 +2,7 @@
   "skins": {},
   "autoGenerateExmlsList": true,
   "exmls": [
+    "resource/skins/battle/Attribute.exml",
     "resource/skins/battle/Unit.exml",
     "resource/skins/battle/Battle.exml",
     "resource/skins/battle/Recorder.exml",

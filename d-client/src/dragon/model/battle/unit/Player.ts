@@ -1,6 +1,6 @@
 module dragon.battle0 {
 	export class Player extends Unit {
-		public initData(){
+		public initData() {
 			let dunit = kernel.data.group('unit').rand();
 			this.$id = dunit.id;
 			this.$name = dunit.Name;
@@ -12,12 +12,14 @@ module dragon.battle0 {
 			}
 
 			let dattr = kernel.data.group('attribute').find(dunit.id * 10000 + level);
-			this.attr(enums.Attribute.MaxHP, dattr.MaxHP);
+			this.attr(enums.Attribute.HP, dattr.MaxHP);
 			this.attr(enums.Attribute.STR, dattr.STR);
+			this.attr(enums.Attribute.DEX, dattr.Hit);
+			this.attr(enums.Attribute.INT, dattr.Critical);
+			this.attr(enums.Attribute.WILL, dattr.Dodge);
 			this.attr(enums.Attribute.DEF, dattr.DEF);
-			this.attr(enums.Attribute.Hit, dattr.Hit);
-			this.attr(enums.Attribute.Dodge, dattr.Dodge);
-			this.attr(enums.Attribute.Critical, dattr.Critical);
+
+			kernel.event.dispatchEventWith('dragon.battle.attribute', false, this);
 		}
 	}
 }

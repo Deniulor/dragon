@@ -2,7 +2,8 @@ module dragon.view {
 	class MainScene extends Scene {
 
 		private battle: Battle;
-		private recorder: egret.DisplayObjectContainer;
+		private recorder: egret.DisplayObject;
+		private attribute: egret.DisplayObject;
 
 		public constructor() {
 			super();
@@ -18,6 +19,15 @@ module dragon.view {
 			recorder.height = this.recorder.height;
 			this.recorder.visible = false;
 			this.addChild(this.recorder = recorder)
+
+
+			let attribute = new Attribute();
+			attribute.x = this.attribute.x;
+			attribute.y = this.attribute.y;
+			attribute.width = this.attribute.width;
+			attribute.height = this.attribute.height;
+			this.attribute.visible = false;
+			this.addChild(this.attribute = attribute)
 		}
 
 		public afterLoaded() {

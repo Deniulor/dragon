@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="Avatar" width="200" height="90" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Rect width="152" height="6" y="61" ellipseWidth="2" horizontalCenter="0" fillColor="0xe5e5e5"/>
-	<e:Rect id="rct_hp" width="152" height="6" y="61" ellipseWidth="2" horizontalCenter="0" scaleX="0.7" fillColor="0xc10b0b"/>
-	<e:Label id="lbl_hp" text="  100/10000" size="15" y="45" horizontalCenter="0.5" fontFamily="SimHei" textColor="0x858585"/>
-	<e:Label id="lbl_name" text="deniulor" y="10" horizontalCenter="0" fontFamily="KaiTi" textColor="0x858585" anchorOffsetX="0" size="36"/>
+	<e:Rect width="152" height="6" y="54" ellipseWidth="2" fillColor="0xe5e5e5" x="24"/>
+	<e:Rect id="rct_hp" width="152" height="6" y="54" ellipseWidth="2" scaleX="0.7" fillColor="0xc10b0b" x="24"/>
+	<e:Label id="lbl_hp" text="  100/10000" size="15" y="38" horizontalCenter="0.5" fontFamily="SimHei" textColor="0x858585"/>
+	<e:Rect width="152" height="6" y="78" ellipseWidth="2" fillColor="0xE5E5E5" x="24"/>
+	<e:Rect id="rct_mp" width="152" height="6" y="78" ellipseWidth="2" scaleX="0.7" x="24" fillColor="0x06799f"/>
+	<e:Label id="lbl_mp" text="  100/10000" size="15" y="62" horizontalCenter="0.5" fontFamily="SimHei" textColor="0x858585"/>
+	<e:Label id="lbl_name" text="deniulor" y="4" horizontalCenter="0" fontFamily="KaiTi" textColor="0x858585" anchorOffsetX="0" size="36"/>
 </e:Skin>

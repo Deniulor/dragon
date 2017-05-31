@@ -41,7 +41,7 @@ module dragon.battle0 {
 
 
 			this.initData();
-			this.$hp = this.attr(enums.Attribute.MaxHP);
+			this.$hp = this.attr(enums.Attribute.HP);
 			this.$view.init();
 		}
 
@@ -73,17 +73,12 @@ module dragon.battle0 {
 			return this.$attrs[attr] || 0;
 		}
 
-
 		public hit(tar: Unit) {
-			var hitchance = this.attr(enums.Attribute.Hit) / (this.attr(enums.Attribute.Hit) + tar.attr(enums.Attribute.Dodge));
-			hitchance = hitchance + (this.attr(enums.Attribute.HitPro) - tar.attr(enums.Attribute.DodgePro)) / 100.0;
-			return this.battle.random() < hitchance;
+			return this.battle.random() < 0.05;
 		}
 
 		public critical(tar: Unit) {
-			var critchance = this.attr(enums.Attribute.Critical) / (this.attr(enums.Attribute.Critical) + tar.attr(enums.Attribute.Tenacity));
-			critchance = critchance + (this.attr(enums.Attribute.CriticalPro) - tar.attr(enums.Attribute.TenacityPro)) / 100.0;
-			return this.battle.random() < critchance;
+			return this.battle.random() < 0.1;
 		}
 
 		public addBuff(buff: Buff) {
@@ -105,11 +100,11 @@ module dragon.battle0 {
 					this.$view.removeBuff(pre);
 				}
 			}
-			this.$hp = Math.min(this.$hp, this.attr(enums.Attribute.MaxHP));
+			this.$hp = Math.min(this.$hp, this.attr(enums.Attribute.HP));
 		}
 
 		public reborn() {
-			this.hp = this.attr(enums.Attribute.MaxHP);
+			this.hp = this.attr(enums.Attribute.HP);
 			this.$view.onBorn();
 		}
 
@@ -121,7 +116,7 @@ module dragon.battle0 {
 		}
 
 		public heal(heal: number) {
-			this.hp = Math.min(this.attr(enums.Attribute.MaxHP), this.hp + heal);
+			this.hp = Math.min(this.attr(enums.Attribute.HP), this.hp + heal);
 		}
 
 		protected die() {

@@ -1,3 +1,5 @@
+declare class Attribute extends eui.Skin{
+}
 declare class Battle extends eui.Skin{
 }
 declare class Recorder extends eui.Skin{
