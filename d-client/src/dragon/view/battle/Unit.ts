@@ -9,6 +9,8 @@ module dragon.view {
 
 		private rct_hp: eui.Rect;
 		private lbl_hp: eui.Label;
+		private rct_mp: eui.Rect;
+		private lbl_mp: eui.Label;
 		private lbl_name: eui.Label;
 
 		private $pos: egret.Point;
@@ -46,6 +48,7 @@ module dragon.view {
 			this.visible = true;
 			this.lbl_name.text = this.unit.name;
 			this.onHpChanged();
+			this.onMpChanged();
 		}
 
 		public play(skill: string) {
@@ -65,8 +68,13 @@ module dragon.view {
 		}
 
 		public onHpChanged() {
-			this.lbl_hp.text = Math.max(Math.floor(this.unit.hp), 0) + "/" + Math.floor(this.unit.attr(enums.Attribute.HP))
-			egret.Tween.get(this.rct_hp).to({ scaleX: Math.max(this.unit.hp / this.unit.attr(enums.Attribute.HP), 0) }, 300)
+			this.lbl_hp.text = Math.max(Math.floor(this.unit.hp), 0) + "/" + Math.floor(this.unit.attr(enums.Attr.HP))
+			egret.Tween.get(this.rct_hp).to({ scaleX: Math.max(this.unit.hp / this.unit.attr(enums.Attr.HP), 0) }, 400, egret.Ease.circInOut)
+		}
+
+		public onMpChanged() {
+			this.lbl_mp.text = Math.max(Math.floor(this.unit.mp), 0) + "/" + Math.floor(this.unit.attr(enums.Attr.MP))
+			egret.Tween.get(this.rct_mp).to({ scaleX: Math.max(this.unit.mp / this.unit.attr(enums.Attr.MP), 0) }, 400, egret.Ease.circInOut)
 		}
 
 		public onDie() {

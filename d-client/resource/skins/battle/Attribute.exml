@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="Attribute" width="640" height="200" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Rect id="bg" left="-1" right="1" top="0" bottom="0" fillColor="0xffffff"/>
-	<e:Label text="力量" y="13" textColor="0x747474" fontFamily="Microsoft YaHei" x="67"/>
-	<e:Label id="lbl_STR" text="80" y="13" fontFamily="Microsoft YaHei" x="139" textColor="0xe3b20a" size="30"/>
-	<e:Label text="敏捷" y="49" textColor="0x747474" fontFamily="Microsoft YaHei" x="67"/>
-	<e:Label id="lbl_DEX" text="80" y="49" textColor="0xE3B20A" fontFamily="Microsoft YaHei" x="139" size="30"/>
-	<e:Label text="智力" y="86" textColor="0x747474" fontFamily="Microsoft YaHei" x="67"/>
-	<e:Label id="lbl_INT" text="80" y="86" textColor="0xE3B20A" fontFamily="Microsoft YaHei" x="139" size="30"/>
-	<e:Label text="意志" y="121" textColor="0x747474" fontFamily="Microsoft YaHei" x="67"/>
-	<e:Label id="lbl_WILL" text="80" y="121" textColor="0xE3B20A" fontFamily="Microsoft YaHei" x="139" size="30"/>
-	<e:Label text="幸运" y="158" textColor="0x747474" fontFamily="Microsoft YaHei" x="67"/>
-	<e:Label id="lbl_LUCK" text="80" y="158" textColor="0xE3B20A" fontFamily="Microsoft YaHei" x="139" size="30"/>
-	<e:Label text="攻击" y="13" textColor="0x747474" fontFamily="Microsoft YaHei" x="233"/>
-	<e:Label id="lbl_ATK" text="50~80" y="13" fontFamily="Microsoft YaHei" x="301" textColor="0xE3B20A" size="30"/>
-	<e:Label text="平衡" y="49" textColor="0x747474" fontFamily="Microsoft YaHei" x="233"/>
-	<e:Label id="lbl_BAL" text="30" y="49" fontFamily="Microsoft YaHei" x="301" textColor="0xE3B20A" size="30"/>
-	<e:Label text="暴击" y="86" textColor="0x747474" fontFamily="Microsoft YaHei" x="233"/>
-	<e:Label id="lbl_CRT" text="30" y="86" fontFamily="Microsoft YaHei" x="301" textColor="0xE3B20A" size="30"/>
-	<e:Label text="暴击伤害" y="121" textColor="0x747474" fontFamily="Microsoft YaHei" x="233"/>
-	<e:Label id="lbl_CRT_M" text="30" y="122" fontFamily="Microsoft YaHei" x="362.5" textColor="0xE3B20A" size="30"/>
-	<e:Label text="防御" y="13" textColor="0x747474" fontFamily="Microsoft YaHei" x="427"/>
-	<e:Label id="lbl_DEF" text="50" y="13" fontFamily="Microsoft YaHei" x="499" textColor="0xE3B20A" size="30"/>
-	<e:Label text="护甲" y="49" textColor="0x747474" fontFamily="Microsoft YaHei" x="427"/>
-	<e:Label id="lbl_PRT" text="30" y="49" fontFamily="Microsoft YaHei" x="499" textColor="0xE3B20A" size="30"/>
-	<e:Label text="护甲穿透" y="86" textColor="0x747474" fontFamily="Microsoft YaHei" x="427"/>
-	<e:Label id="lbl_PRT_I" text="30" y="86" fontFamily="Microsoft YaHei" x="556.5" textColor="0xE3B20A" size="30"/>
+	<e:Label text="力量" y="13" textColor="0x747474" fontFamily="Microsoft YaHei" x="67" size="24"/>
+	<e:Label id="lbl_STR" text="80" y="13" fontFamily="Microsoft YaHei" x="139" textColor="0xe3b20a" size="24"/>
+	<e:Label text="敏捷" y="49" textColor="0x747474" fontFamily="Microsoft YaHei" x="67" size="24"/>
+	<e:Label id="lbl_DEX" text="80" y="49" textColor="0xE3B20A" fontFamily="Microsoft YaHei" x="139" size="24"/>
+	<e:Label text="智力" y="86" textColor="0x747474" fontFamily="Microsoft YaHei" x="67" size="24"/>
+	<e:Label id="lbl_INT" text="80" y="86" textColor="0xE3B20A" fontFamily="Microsoft YaHei" x="139" size="24"/>
+	<e:Label text="意志" y="121" textColor="0x747474" fontFamily="Microsoft YaHei" x="67" size="24"/>
+	<e:Label id="lbl_WILL" text="80" y="121" textColor="0xE3B20A" fontFamily="Microsoft YaHei" x="139" size="24"/>
+	<e:Label text="幸运" y="158" textColor="0x747474" fontFamily="Microsoft YaHei" x="67" size="24"/>
+	<e:Label id="lbl_LUCK" text="80" y="158" textColor="0xE3B20A" fontFamily="Microsoft YaHei" x="139" size="24"/>
+	<e:Label text="攻击" y="13" textColor="0x747474" fontFamily="Microsoft YaHei" x="233" size="24"/>
+	<e:Label id="lbl_ATK" text="50~80" y="13" fontFamily="Microsoft YaHei" x="301" textColor="0xE3B20A" size="24"/>
+	<e:Label text="平衡" y="49" textColor="0x747474" fontFamily="Microsoft YaHei" x="233" size="24"/>
+	<e:Label id="lbl_BAL" text="30" y="49" fontFamily="Microsoft YaHei" x="301" textColor="0xE3B20A" size="24"/>
+	<e:Label text="暴击" y="86" textColor="0x747474" fontFamily="Microsoft YaHei" x="233" size="24"/>
+	<e:Label id="lbl_CRT" text="30" y="86" fontFamily="Microsoft YaHei" x="301" textColor="0xE3B20A" size="24"/>
+	<e:Label text="暴击伤害" y="121" textColor="0x747474" fontFamily="Microsoft YaHei" x="233" size="24"/>
+	<e:Label id="lbl_CRT_M" text="30" y="122" fontFamily="Microsoft YaHei" x="362.5" textColor="0xE3B20A" size="24"/>
+	<e:Label text="防御" y="13" textColor="0x747474" fontFamily="Microsoft YaHei" x="427" size="24"/>
+	<e:Label id="lbl_DEF" text="50" y="13" fontFamily="Microsoft YaHei" x="499" textColor="0xE3B20A" size="24"/>
+	<e:Label text="护甲" y="49" textColor="0x747474" fontFamily="Microsoft YaHei" x="427" size="24"/>
+	<e:Label id="lbl_PRT" text="30" y="49" fontFamily="Microsoft YaHei" x="499" textColor="0xE3B20A" size="24"/>
+	<e:Label text="护甲穿透" y="86" textColor="0x747474" fontFamily="Microsoft YaHei" x="427" size="24"/>
+	<e:Label id="lbl_PRT_I" text="30" y="86" fontFamily="Microsoft YaHei" x="556.5" textColor="0xE3B20A" size="24"/>
 </e:Skin>

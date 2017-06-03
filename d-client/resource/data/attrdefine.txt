@@ -1,5 +1,5 @@
 ﻿属性id	属性公式
-enum<attribute>	string
+string	string
 id	define
 HP	50 + STR * 1.2
 MP	30 + INT * 1.5

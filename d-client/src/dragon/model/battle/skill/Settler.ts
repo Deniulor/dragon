@@ -23,18 +23,14 @@ module dragon.battle0 {
                 super(skill);
             }
             public settle(me: Unit, tar: Unit) {
-                var dmg = (me.attr(enums.Attribute.STR) - (tar.attr(enums.Attribute.DEF) || 0)) * this.skill.strength;
-                dmg = dmg <= 0 ? 1 : dmg;
-                var isCritical = false;
-                var isHit = me.hit(tar);
-                if (isHit) {
-                    if (me.critical(tar)) {
-                        dmg *= config.CriticalMultiple;
-                        isCritical = true;
-                    }
-                } else {
-                    dmg = 0; //Miss
-                }
+                // var dmg = (me.attr(enums.Attribute.STR) - (tar.attr(enums.Attribute.DEF) || 0)) * this.skill.strength;
+
+                let dmg = (me.attr(enums.Attr.ATK_MAX) - me.attr(enums.Attr.ATK_MIN))
+                    * (Math.random() * (1 - me.attr(enums.Attr.BAL) / 150))
+                    + me.attr(enums.Attr.ATK_MIN);
+                let isCritical = me.critical(tar);
+                if (isCritical)
+                    dmg *= me.attr(enums.Attr.CRT_M);
                 dmg = Math.floor(dmg);
                 tar.damage(dmg, me);
                 tar.view.onDamage(me, dmg, isCritical);
@@ -48,7 +44,7 @@ module dragon.battle0 {
                 super(skill);
             }
             public settle(me: Unit, tar: Unit) {
-                var heal = me.attr(enums.Attribute.STR) * this.skill.strength;
+                var heal = me.attr(enums.Attr.STR) * this.skill.strength;
                 heal = Math.floor(heal);
                 tar.heal(heal);
                 tar.view.onHeal(heal);

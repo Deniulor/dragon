@@ -19,11 +19,16 @@ module dragon.battle0 {
 		protected $hp;
 		public get hp() { return this.$hp }
 		public set hp(value: number) { this.$hp = value; this.$view.onHpChanged() }
+		protected $mp;
+		public get mp() { return this.$mp }
+		public set mp(value: number) { this.$mp = value; this.$view.onMpChanged() }
 		public get dead() { return this.$hp <= 0 }
 
 		protected skillLauncher: SkillLauncher;
 		protected buffs: { [k: number]: Buff };
 		protected $attrs: { [k: number]: number }; // 属性列表
+		protected $mainAttr: enums.Attr = enums.Attr.STR;
+		public get mainAttr() { return this.$mainAttr }
 
 
 		constructor(battle: Battle, param?: any) {
@@ -41,7 +46,8 @@ module dragon.battle0 {
 
 
 			this.initData();
-			this.$hp = this.attr(enums.Attribute.HP);
+			this.$hp = this.attr(enums.Attr.HP);
+			this.$mp = this.attr(enums.Attr.MP);
 			this.$view.init();
 		}
 
@@ -51,34 +57,26 @@ module dragon.battle0 {
 		 * attr 属性类型
 		 * value 若传参则认为是set操作
 		 */
-		public attr(attr: enums.Attribute, value?: number) {
+		public attr(attr: enums.Attr, value?: number) {
 			if (value != undefined) {
 				this.$attrs[attr] = value;
 			}
-			var base = this.$attrs[attr] || 0;
-			var per = 0;
-			var fixed = 0;
-			for (var k in this.buffs) {
-				var buff = this.buffs[k];
-				if (!buff.isEffective()) {
-					continue;
-				}
-				per += buff.attrPer(attr);
-				fixed += buff.attrFixed(attr);
-			}
-			return base * (1 + per) + fixed;
+			let func = config.attrFun(attr)
+			return this.baseAttr(attr) + (func ? func(this) : 0);
 		}
 
-		public baseAttr(attr: enums.Attribute) {
+		public baseAttr(attr: enums.Attr) {
 			return this.$attrs[attr] || 0;
 		}
 
-		public hit(tar: Unit) {
-			return this.battle.random() < 0.05;
+		public initAttr(attrs: { [k: string]: number }) {
+			for (let k in attrs)
+				enums.Attr[k] && this.attr(enums.Attr[k], attrs[k]);
 		}
 
 		public critical(tar: Unit) {
-			return this.battle.random() < 0.1;
+			// 暴击 / ( 暴击 + 敌方护甲 + 20）
+			return this.battle.random() < this.attr(enums.Attr.CRT) / (this.attr(enums.Attr.CRT) + tar.attr(enums.Attr.PRT) + 20);
 		}
 
 		public addBuff(buff: Buff) {
@@ -100,11 +98,13 @@ module dragon.battle0 {
 					this.$view.removeBuff(pre);
 				}
 			}
-			this.$hp = Math.min(this.$hp, this.attr(enums.Attribute.HP));
+			this.$hp = Math.min(this.$hp, this.attr(enums.Attr.HP));
 		}
 
 		public reborn() {
-			this.hp = this.attr(enums.Attribute.HP);
+			this.hp = this.attr(enums.Attr.HP);
+			this.mp = this.attr(enums.Attr.MP);
+			this.skillLauncher.reset();
 			this.$view.onBorn();
 		}
 
@@ -116,11 +116,11 @@ module dragon.battle0 {
 		}
 
 		public heal(heal: number) {
-			this.hp = Math.min(this.attr(enums.Attribute.HP), this.hp + heal);
+			this.hp = Math.min(this.attr(enums.Attr.HP), this.hp + heal);
 		}
 
 		protected die() {
-			this.$view.onDie();
+			// this.$view.onDie();
 			this.$battle.onDie(this);
 		}
 

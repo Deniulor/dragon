@@ -1,5 +1,5 @@
 module dragon.enums {
-	export enum Attribute {
+	export enum Attr {
 		None, // 无
 
 		STR, //	力量：选择近战武器时增加基础攻击
@@ -20,9 +20,9 @@ module dragon.enums {
 		DEF, //	防御：百分比降低伤害
 		PRT, //	护甲：直接降低伤害
 		PRT_I, //	无视护甲：无视对方直接降低伤害
-		MAGATK, //	魔法攻击：同时增加最小魔法攻击和最大魔法攻击
+		MAG_ATK, //	魔法攻击：同时增加最小魔法攻击和最大魔法攻击
 
-		GODCHS, //	掉宝率：增加每次掉宝的品质及掉落概率
-		SKLCHS, //	施法概率：增加施法概率
+		GOD_CHS, //	掉宝率：增加每次掉宝的品质及掉落概率
+		SKL_CHS, //	施法概率：增加施法概率
 	}
 }

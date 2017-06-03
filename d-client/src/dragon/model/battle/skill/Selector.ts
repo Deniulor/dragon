@@ -38,7 +38,7 @@ module dragon.battle0 {
 
 	namespace selector.strategy {
 		export const HpMin = (me: Unit, tar1: Unit, tar2: Unit) => {
-			return tar1.hp / tar1.attr(enums.Attribute.HP) < tar2.hp / tar2.attr(enums.Attribute.HP) ? tar1 : tar2
+			return tar1.hp / tar1.attr(enums.Attr.HP) < tar2.hp / tar2.attr(enums.Attr.HP) ? tar1 : tar2
 		}
 	}
 	namespace selector.type {

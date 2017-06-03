@@ -1,5 +1,5 @@
 buffid	备注	属性类型	属性值	属性每级属性	属性是否固定值	时间/秒	使用的特效	CD时间内无法再次触发
-number	number	list<enum<attribute>>	list<number>	list<number>	list<number>	number	string	number
+number	number	list<enum<attr>>	list<number>	list<number>	list<number>	number	string	number
 id	#备注	AttrType	AttrValueList	AttrIncList	AttrFixedList	Time	Effect	CD
 1	双防提升105%,每级提升%5	DEF;RGS	5;5	1;1	0;0	5		60
 2	攻击提升105%,每级提升%5	ATK	5	1	0	7		11

@@ -24,21 +24,20 @@ module dragon.view {
 		public onAttribute(event: egret.Event) {
 			if (!this.parent) return
 			let player: battle0.Player = event.data;
-			this.lbl_STR.text = player.attr(enums.Attribute.STR).toString()
-			this.lbl_DEX.text = player.attr(enums.Attribute.DEX).toString()
-			this.lbl_INT.text = player.attr(enums.Attribute.INT).toString()
-			this.lbl_WILL.text = player.attr(enums.Attribute.WILL).toString()
-			this.lbl_LUCK.text = player.attr(enums.Attribute.LUCK).toString()
+			this.lbl_STR.text = player.attr(enums.Attr.STR).toFixed()
+			this.lbl_DEX.text = player.attr(enums.Attr.DEX).toFixed()
+			this.lbl_INT.text = player.attr(enums.Attr.INT).toFixed()
+			this.lbl_WILL.text = player.attr(enums.Attr.WILL).toFixed()
+			this.lbl_LUCK.text = player.attr(enums.Attr.LUCK).toFixed()
 
-			this.lbl_ATK.text = player.attr(enums.Attribute.ATK_MIN) + '~' + player.attr(enums.Attribute.ATK_MAX)
-			this.lbl_BAL.text = player.attr(enums.Attribute.BAL).toString()
-			this.lbl_CRT.text = player.attr(enums.Attribute.CRT).toString()
-			this.lbl_CRT_M.text = player.attr(enums.Attribute.CRT_M).toString()
+			this.lbl_ATK.text = player.attr(enums.Attr.ATK_MIN).toFixed() + '~' + player.attr(enums.Attr.ATK_MAX).toFixed()
+			this.lbl_BAL.text = player.attr(enums.Attr.BAL).toFixed()
+			this.lbl_CRT.text = player.attr(enums.Attr.CRT).toFixed()
+			this.lbl_CRT_M.text = player.attr(enums.Attr.CRT_M).toFixed()
 
-			this.lbl_DEF.text = player.attr(enums.Attribute.DEF).toString()
-			this.lbl_PRT.text = player.attr(enums.Attribute.PRT).toString()
-			this.lbl_PRT_I.text = player.attr(enums.Attribute.PRT_I).toString()
-			// this.lbl_records.textFlow = recorder.parse();
+			this.lbl_DEF.text = player.attr(enums.Attr.DEF).toFixed()
+			this.lbl_PRT.text = player.attr(enums.Attr.PRT).toFixed()
+			this.lbl_PRT_I.text = player.attr(enums.Attr.PRT_I).toFixed()
 		}
 	}
 }

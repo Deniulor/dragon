@@ -12,12 +12,7 @@ module dragon.battle0 {
 			}
 
 			let dattr = kernel.data.group('attribute').find(dunit.id * 10000 + level);
-			this.attr(enums.Attribute.HP, dattr.MaxHP);
-			this.attr(enums.Attribute.STR, dattr.STR);
-			this.attr(enums.Attribute.DEX, dattr.Hit);
-			this.attr(enums.Attribute.INT, dattr.Critical);
-			this.attr(enums.Attribute.WILL, dattr.Dodge);
-			this.attr(enums.Attribute.DEF, dattr.DEF);
+			this.initAttr(dattr);
 
 			kernel.event.dispatchEventWith('dragon.battle.attribute', false, this);
 		}

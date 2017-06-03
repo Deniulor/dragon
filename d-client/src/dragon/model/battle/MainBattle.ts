@@ -16,14 +16,19 @@ module dragon.battle0 {
 
 		protected onWin() {
 			console.log('Winner!!!');
-			this.monster.init();
-			this.start();
+			egret.setTimeout(this.player.reborn, this.player, 100);
+			egret.setTimeout((this.restart), this, 1000);
 		}
 
 		protected onLost() {
 			console.log('Lost!!!');
-			this.player.init();
-			this.start();
+			egret.setTimeout(this.player.reborn, this.player, 100);
+			egret.setTimeout((this.restart), this, 3000);
+		}
+
+		private restart() {
+			this.monster.init();
+			this.start()
 		}
 
 		public unload() {

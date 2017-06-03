@@ -53,5 +53,10 @@ module dragon.battle0 {
 		public clearSkills() {
 			this.$skillList = [];
 		}
+
+		public reset() {
+			this.cd = 0;
+			this.$skillList.forEach(s => s.cd = 0);
+		}
 	}
 }
