@@ -1,12 +1,5 @@
 module dragon.kernel0 {
-	export interface IData {
-		add(groupName: string, data: string);
-		group(name: string): IGroup;
-		factor(name: string, defaultvalue?: number): number;
-		general(name: string, defaultvalue?: string): string;
-		language(name: string, ...param: any[]): Array<egret.ITextElement>;
-	}
-	export class Data implements IData {
+	export class Data {
 		private groups: { [k: string]: Group } = {};
 		private errGroup = new Group("ERROR GROUP", null);
 
@@ -142,9 +135,11 @@ module dragon.kernel0 {
 					for (let i = 0; i < datas.length; ++i) {
 						let cur_data = datas[i];
 						let cur_value = [];
-						let arr = cur_data[field.index].split(';');
-						for (let j = 0; j < arr.length; ++j) {
-							cur_value.push(field.parser(arr[j]));
+						if (cur_data[field.index].length != 0) {
+							let arr = cur_data[field.index].split(';');
+							for (let j = 0; j < arr.length; ++j) {
+								cur_value.push(field.parser(arr[j]));
+							}
 						}
 						// result[cur_id]-> field.name = cur_value;
 						result[cur_data[idindex]][field.name] = cur_value;
@@ -216,7 +211,7 @@ module dragon.kernel0 {
 			let enum_name = type.replace(/^enum</, '').replace(/>$/, '');
 			for (let name in dragon.enums) {
 				if (new RegExp(enum_name, 'i').test(name)) {
-					return (str) => { return dragon.enums[name][str]; }
+					return (str) => { return utils.number.isNumber(str) ? Number(str) : dragon.enums[name][str]; }
 				}
 			}
 			throw new Error('错误的枚举定义:' + enum_name);

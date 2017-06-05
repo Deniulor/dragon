@@ -5,7 +5,7 @@
 			"name": "loading"
 		},
 		{
-			"keys": "general_txt,factor_txt,attribute_txt,buff_txt,monster_txt,skill_txt,unit_txt,language_txt,attrdefine_txt",
+			"keys": "general_txt,factor_txt,attribute_txt,buff_txt,monster_txt,skill_txt,unit_txt,language_txt,attrdefine_txt,drop_txt,uniformitem_txt",
 			"name": "data"
 		},
 		{
@@ -537,6 +537,16 @@
 			"url": "data/attrdefine.txt",
 			"type": "text",
 			"name": "attrdefine_txt"
+		},
+		{
+			"url": "data/drop.txt",
+			"type": "text",
+			"name": "drop_txt"
+		},
+		{
+			"url": "data/uniformitem.txt",
+			"type": "text",
+			"name": "uniformitem_txt"
 		}
 	]
 }

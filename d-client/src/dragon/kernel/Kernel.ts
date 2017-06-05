@@ -21,8 +21,8 @@ namespace dragon {
         /**
          * net 网络连接管理器
          */
-        private $data: kernel0.IData;
-        get data(): kernel0.IData { return this.$data; }
+        private $data: kernel0.Data;
+        get data(): kernel0.Data { return this.$data; }
 
         /**
          * effect 特效管理器
@@ -30,7 +30,7 @@ namespace dragon {
         private $effect: kernel0.IEffect;
         get effect(): kernel0.IEffect { return this.$effect; }
 
-        private $event:egret.EventDispatcher;
+        private $event: egret.EventDispatcher;
         get event(): egret.EventDispatcher { return this.$event; }
 
         public init(): void {
@@ -39,7 +39,7 @@ namespace dragon {
             this.$storage = new dragon.kernel0.LocalStorage();
             this.$data = new dragon.kernel0.Data();
             this.$effect = new dragon.kernel0.EffectManager();
-            this.$event = new egret.EventDispatcher();            
+            this.$event = new egret.EventDispatcher();
         }
     }
 

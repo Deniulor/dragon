@@ -26,7 +26,7 @@ module dragon.battle0 {
 			// 转化为函数
 			for (let i = 0; i < splits.length; ++i) {
 				let s = splits[i];
-				if (parseFloat(s).toString() != "NaN") // 是数字，返回转化函数
+				if (utils.number.isNumber(s)) // 是数字，返回转化函数
 					funcs[i] = function (u: Unit) {
 						return Number(s)
 					}

@@ -10,12 +10,13 @@ module dragon.battle0 {
 		protected createPet(): Unit {
 			return;
 		}
-		protected createMonster(): Unit {
+		protected createMonster(): Monster {
 			return new Monster(this);
 		}
 
 		protected onWin() {
 			console.log('Winner!!!');
+			manager.package.addReward(this.monster.drop());
 			egret.setTimeout(this.player.reborn, this.player, 100);
 			egret.setTimeout((this.restart), this, 1000);
 		}

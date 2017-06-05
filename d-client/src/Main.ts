@@ -4,7 +4,7 @@ class Main extends eui.UILayer {
     protected createChildren(): void {
         super.createChildren();
         egret.TextField.default_fontFamily = "黑体";
-        if (dragon.tools.platform() == dragon.tools.Platform.PC) {
+        if (dragon.utils.tools.platform() == dragon.utils.tools.Platform.PC) {
             this.stage.scaleMode = egret.StageScaleMode.SHOW_ALL;
             this.stage.orientation = egret.OrientationMode.AUTO;
             document.body.style.height = '100%';
@@ -68,6 +68,7 @@ class Main extends eui.UILayer {
         dragon.kernel.init();
         dragon.kernel.ui.init(this); //设置 root layer
         dragon.player.init();
+        dragon.utils.tools.initModel(dragon.manager);
 
         // 进入开始界面
         dragon.kernel.ui.loadScene(new dragon.view.StartScene());

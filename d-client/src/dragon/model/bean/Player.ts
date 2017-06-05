@@ -7,10 +7,8 @@ module dragon {
 
 	class Player {
 		public data: PlayerData = new PlayerData();
-		public team: model.Team;
 
 		public init() {
-			this.team = new model.Team();
 		}
 	}
 

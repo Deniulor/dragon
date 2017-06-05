@@ -14,7 +14,7 @@ module dragon.battle0 {
 
         protected player: Unit;
         protected pet: Unit;
-        protected monster: Unit;
+        protected monster: Monster;
         protected $all: Array<Unit> = [];
         public get all(): Array<Unit> { return this.$all };
         protected bullets: Array<Bullet> = [];
@@ -115,7 +115,7 @@ module dragon.battle0 {
 
         protected abstract createPlayer(): Unit;
         protected abstract createPet(): Unit;
-        protected abstract createMonster(): Unit;
+        protected abstract createMonster(): Monster;
 
         protected abstract onWin();
         protected abstract onLost();

@@ -1,11 +1,11 @@
-module dragon.model {
-	export class NotiveManager {
+module dragon.manager {
+	export const notice = new class {
 		private root: eui.UILayer;
 
-		public init(root: eui.UILayer) {
-			this.root = root;
+		public init() {
+			this.root = kernel.ui.noticeLayer;
 		}
-		
+
 		public addPrompt(content: string, time: number = 1700) {
 		}
 	}
