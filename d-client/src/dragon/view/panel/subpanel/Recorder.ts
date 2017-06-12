@@ -4,7 +4,7 @@ module dragon.view {
 
 		public constructor() {
 			super();
-			this.skinName = "resource/skins/battle/Recorder.exml";
+			this.skinName = "resource/skins/panel/subpanel/Recorder.exml";
 			kernel.event.addEventListener('dragon.battle.record', this.onRecords, this);
 		}
 

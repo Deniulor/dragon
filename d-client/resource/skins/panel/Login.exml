@@ -2,15 +2,11 @@
 <e:Skin class="start" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<w:Config id="157daa27297"/>
 	<e:Group width="100%" height="414" anchorOffsetY="0" x="-1" bottom="0">
-		<e:Image id="btn_start" source="btn_bg3_png" y="170" scaleX="1" scaleY="1" horizontalCenter="0"/>
-		<e:Image source="startgame_png" touchEnabled="false" y="184" scaleX="1" scaleY="1" horizontalCenter="0"/>
-		<e:Image source="tit_bg_png" scale9Grid="99,3,314,50" y="5" scaleX="1" scaleY="1" horizontalCenter="0" name="open_ServerSelect"/>
 	<e:Image id="img_new" source="server_new_png" y="15" scaleX="1" scaleY="1" horizontalCenter="180.5" visible="false"/>
 		<e:Image id="img_hot" y="15" scaleX="1" scaleY="1" horizontalCenter="180.5" source="server_hot_png" visible="false"/>
-	<e:Label id="lbl_server" text="服务器列表加载中" y="18" size="30" textAlign="left" strokeColor="0x000000" stroke="1" textColor="0xffffff" scaleX="1" scaleY="1" horizontalCenter="0" name="open_ServerSelect"/>
 		<e:Label id="lbl_status" text="良好" y="18" size="30" textAlign="left" strokeColor="0x045A01" stroke="2" textColor="0x27EF36" scaleX="1" scaleY="1" horizontalCenter="-179" visible="false"/>
-		<e:Label text="抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。" size="21" anchorOffsetY="0" height="112" anchorOffsetX="0" width="296" scaleX="1" scaleY="1" bottom="50" horizontalCenter="0" textColor="0xfcf3d9"/>
-	<e:Label id="btn_select" text="点击换服" y="81" size="30" textAlign="left"  strokeColor="0x8B1725" stroke="3" textColor="0xFCE795" scaleX="1" scaleY="1" horizontalCenter="0" name="open_ServerSelect"/>
+		<e:Label text="抵制不良游戏，拒绝盗版游戏。\n注意自我保护，谨防受骗上当。\n适度游戏益脑，沉迷游戏伤身。\n合理安排时间，享受健康生活。" size="21" height="95" width="319" bottom="67" horizontalCenter="11.5" fontFamily="Microsoft YaHei" anchorOffsetX="0" textColor="0xbcbcbc"/>
 		<e:Label id="lbl_version" text="version:0" right="20" bottom="20" size="20"/>
+		<e:Label id="btn_start" text="开始游戏" x="240" y="120" size="40" fontFamily="Microsoft YaHei" textColor="0x666666"/>
 	</e:Group>
 </e:Skin>

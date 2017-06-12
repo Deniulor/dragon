@@ -5,8 +5,11 @@
     "resource/skins/battle/Attribute.exml",
     "resource/skins/battle/Unit.exml",
     "resource/skins/battle/Battle.exml",
-    "resource/skins/battle/Recorder.exml",
+    "resource/skins/component/Item.exml",
     "resource/skins/panel/Login.exml",
+    "resource/skins/panel/subpanel/MainMenu.exml",
+    "resource/skins/panel/subpanel/Package.exml",
+    "resource/skins/panel/subpanel/Recorder.exml",
     "resource/skins/scene/Main.exml"
   ]
 }

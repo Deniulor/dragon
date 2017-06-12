@@ -10,7 +10,7 @@ module dragon.panel {
 
 	export function event(eventname: string, ispermanent: boolean = false, iserrcb: boolean = false) {
 		return function (target: Panel, propertyKey: string, descriptor: PropertyDescriptor) {
-			var panelname: string = target.getPanelName();
+			var panelname: string = target.PanelName;
 			var panelEvent: PanelCallbacks = eventCbs[panelname] || (eventCbs[panelname] = new PanelCallbacks());
 			var events;
 			if (!ispermanent && !iserrcb) {
@@ -63,10 +63,10 @@ module dragon.panel {
 			this.percentHeight = 100;
 		}
 
-		public abstract getPanelName(): string;
+		public abstract get PanelName(): string;
 
 		protected initSkin() {
-			this.skinName = "resource/skins/panel/" + this.getPanelName() + '.exml';
+			this.skinName = "resource/skins/panel/" + this.PanelName + '.exml';
 		}
 
 
@@ -78,25 +78,11 @@ module dragon.panel {
 				}
 				if (child.name.search("^fun_close$") == 0) {
 					child.addEventListener(egret.TouchEvent.TOUCH_END, () => {
-						kernel.ui.$close(this.getPanelName());
+						kernel.ui.$close(this.PanelName);
 					}, this);
-				}
-				else if (child.name.search("^fun_open_") == 0) {
-					var btnName = child.name.substring(child.name.lastIndexOf("_") + 1, child.name.length);
+				} else if (child.name.search("^fun_open_") == 0) {
 					child.addEventListener(egret.TouchEvent.TOUCH_END, (evt: egret.TouchEvent) => {
-						var touchObject = <eui.Component>evt.target;
-						if (touchObject != null) {
-							var tp = touchObject.name.indexOf(".");
-							var index;
-							var panelName = "";
-							if (tp <= 0) {
-								panelName = touchObject.name.substring(touchObject.name.indexOf("_") + 1, touchObject.name.length);
-							} else {
-								panelName = touchObject.name.substring(touchObject.name.indexOf("_") + 1, tp);
-								index = touchObject.name.substring(tp + 1, touchObject.name.length);
-							}
-							dragon.kernel.ui.$open(panelName, index);
-						}
+						evt.target && dragon.kernel.ui.$open(evt.target.name.replace('fun_open_', ''));
 					}, this);
 				}
 				this.initTouchEvent(child);
@@ -131,11 +117,16 @@ module dragon.panel {
 		protected onClosed() { }//窗口关闭后调用
 		public onActive() { }//窗口被置于顶层的时候调用
 
+		public openSub(sub: Panel) {
+
+		}
+
+
 		private regEvents() {
 			if (this.eventReged) {
 				return;
 			}
-			var panelcallbacks = eventCbs[this.getPanelName()];
+			var panelcallbacks = eventCbs[this.PanelName];
 			if (!panelcallbacks) {
 				return;
 			}

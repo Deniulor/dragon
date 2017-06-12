@@ -31,9 +31,6 @@ namespace dragon.kernel0 {
         // sceneLayer 场景层 如 战场、主城、副本战场之类的
         private sceneLayer: eui.UILayer = new eui.UILayer();
 
-        // mainLayer 主UI层 如 底部功能栏
-        public mainLayer: eui.UILayer = new eui.UILayer();
-
         // panelLayer 弹窗层 如 设置、背包、装备之类的
         public panelLayer: eui.UILayer = new eui.UILayer();
 
@@ -60,14 +57,12 @@ namespace dragon.kernel0 {
             this.root = root;
             this.root.touchThrough = true;
             this.sceneLayer.touchThrough = true;
-            this.mainLayer.touchThrough = true;
             this.panelLayer.touchThrough = true;
             this.noticeLayer.touchThrough = true;
             this.noticeLayer.touchEnabled = false;
             this.maskLayer.touchThrough = true;
             this.loadLayer.touchThrough = true;
             this.root.addChild(this.sceneLayer);
-            this.root.addChild(this.mainLayer);
             this.root.addChild(this.panelLayer);
             this.root.addChild(this.noticeLayer);
             this.root.addChild(this.maskLayer);
@@ -78,7 +73,7 @@ namespace dragon.kernel0 {
 
         public open<T extends panel.Panel>(clazz: { new (): T; }, param: any = 0): T {
             var layer = this.panelLayer;
-            var panelName = clazz.prototype.getPanelName();
+            var panelName = clazz.prototype.PanelName;
             var panel = this.panelPool[panelName];
             if (!panel) {
                 panel = Object.create(clazz.prototype);
@@ -96,9 +91,9 @@ namespace dragon.kernel0 {
             var layer = this.panelLayer;
             var panel = this.panelPool[panelName];
             if (!panel) {
-                var clazz = window["legend"]["panels"][panelName];
+                var clazz = window["dragon"]["panels"][panelName];
                 if (!clazz) {
-                    console.error('Panel:[legent.panels.' + panelName + "]NotDefined");
+                    console.error('Panel:[dragon.panels.' + panelName + "]NotDefined");
                     return;
                 }
                 panel = Object.create(clazz.prototype);
@@ -129,7 +124,7 @@ namespace dragon.kernel0 {
         }
 
         public close<T extends panel.Panel>(clazz: { new (): T; }): T {
-            return <T>this.$close(clazz.prototype.getPanelName());
+            return <T>this.$close(clazz.prototype.PanelName);
         }
 
         /**
@@ -154,7 +149,6 @@ namespace dragon.kernel0 {
             }
             var preScene: Array<view.Scene> = [];
             var sceneLayer = this.sceneLayer;
-            var mainLayer = this.mainLayer;
             for (var i = 0; i < sceneLayer.numChildren; ++i) {
                 preScene.push(<view.Scene>sceneLayer.getChildAt(i));
             }

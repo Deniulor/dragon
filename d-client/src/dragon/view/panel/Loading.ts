@@ -1,7 +1,7 @@
 module dragon.panel {
 	export class Loading extends Panel {
 
-		public getPanelName(): string { return 'Loading'; }
+		public get PanelName(): string { return 'Loading'; }
 		private processBar: eui.Image;
 		private loadingLight: eui.Image;
 		private zl_logo: eui.Image;
@@ -116,18 +116,10 @@ module dragon.panel {
 			this.timeIndex = egret.setTimeout(() => {
 				this.timeIndex = null;
 			}, this, 2000);
-			var tip = ["神装熔炼掉是不会损失神装碎片的哦",
-				"将一键熔炼旁边的勾勾去掉，可以熔炼全部装备",
-				"挑战关主成功可以获得元宝",
-				"决战排行和竞技场排行每日4点清算",
-				"完成每日任务可以获得大量奖励",
-				"决战中击败别人有几率抢夺他身上的藏宝图",
-				"40级就可以开启第二个门派角色",
-				"强化、升星、宝石都是锁定在部位上，换装备不会损失",
-				"点击自动战斗会帮您自动挑战关主",
-				"升级翅膀有几率暴击获得双倍经验哦",
-				"当您不知道如何强化自己时，请跟着小红点走",
-				"离线也会有经验哦，在您重新登录时就会获取",
+			var tip = [
+				"tooltip1",
+				"tooltip2",
+				"tooltip3",
 			];
 			if (tip && tip.length > 0) {
 				this.textField.text = tip[Math.floor(Math.random() * tip.length)];

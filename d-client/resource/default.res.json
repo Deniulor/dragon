@@ -274,11 +274,6 @@
 			"name": "effect_uiboss_jpg"
 		},
 		{
-			"url": "assets/icon/shop_iconbg.png",
-			"type": "image",
-			"name": "shop_iconbg_png"
-		},
-		{
 			"url": "assets/fnt/battle_number.fnt",
 			"type": "font",
 			"name": "battle_number_fnt"
@@ -494,11 +489,6 @@
 			"name": "effect_uiboss_json"
 		},
 		{
-			"url": "assets/button/btn_main.png",
-			"type": "image",
-			"name": "btn_main_png"
-		},
-		{
 			"url": "assets/form/bg.png",
 			"type": "image",
 			"name": "bg_png"
@@ -547,6 +537,61 @@
 			"url": "data/uniformitem.txt",
 			"type": "text",
 			"name": "uniformitem_txt"
+		},
+		{
+			"url": "assets/button/btn_equip.png",
+			"type": "image",
+			"name": "btn_equip_png"
+		},
+		{
+			"url": "assets/button/btn_pack.png",
+			"type": "image",
+			"name": "btn_pack_png"
+		},
+		{
+			"url": "assets/button/btn_pet.png",
+			"type": "image",
+			"name": "btn_pet_png"
+		},
+		{
+			"url": "assets/button/btn_skill.png",
+			"type": "image",
+			"name": "btn_skill_png"
+		},
+		{
+			"url": "assets/button/btn_battle.png",
+			"type": "image",
+			"name": "btn_battle_png"
+		},
+		{
+			"url": "assets/icon/icon_body.png",
+			"type": "image",
+			"name": "icon_body_png"
+		},
+		{
+			"url": "assets/icon/icon_foot.png",
+			"type": "image",
+			"name": "icon_foot_png"
+		},
+		{
+			"url": "assets/icon/icon_head.png",
+			"type": "image",
+			"name": "icon_head_png"
+		},
+		{
+			"url": "assets/icon/icon_offhand.png",
+			"type": "image",
+			"name": "icon_offhand_png"
+		},
+		{
+			"url": "assets/icon/icon_ring.png",
+			"type": "image",
+			"name": "icon_ring_png"
+		},
+		{
+			"url": "assets/icon/icon_weapon.png",
+			"type": "image",
+			"name": "icon_weapon_png"
 		}
 	]
 }

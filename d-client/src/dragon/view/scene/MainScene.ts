@@ -2,8 +2,11 @@ module dragon.view {
 	class MainScene extends Scene {
 
 		private battle: Battle;
-		private recorder: egret.DisplayObject;
-		private attribute: egret.DisplayObject;
+		private mainMenu: eui.Component;
+		private grp_subpanel: eui.Group;
+
+		private attribute: eui.Component;
+		private subpanels: { [k: string]: eui.Component };
 
 		public constructor() {
 			super();
@@ -12,23 +15,33 @@ module dragon.view {
 		public init() {
 			this.skinName = 'resource/skins/scene/Main.exml';
 
-			let recorder = new Recorder();
-			recorder.x = this.recorder.x;
-			recorder.y = this.recorder.y;
-			recorder.width = this.recorder.width;
-			recorder.height = this.recorder.height;
-			this.recorder.visible = false;
-			this.addChild(this.recorder = recorder)
+			this.mainMenu = this.replace(this.mainMenu, new panel.MainMenu())
+			this.attribute = this.replace(this.attribute, new Attribute())
 
-
-			let attribute = new Attribute();
-			attribute.x = this.attribute.x;
-			attribute.y = this.attribute.y;
-			attribute.width = this.attribute.width;
-			attribute.height = this.attribute.height;
-			this.attribute.visible = false;
-			this.addChild(this.attribute = attribute)
+			this.subpanels = {};
+			this.subpanels['battle'] = new Recorder();
+			this.subpanels['pack'] = new Package();
+			this.showPanel('battle');
 		}
+
+		private replace(thisCmp: eui.Component, theone: eui.Component) {
+			theone.x != NaN && (theone.x = thisCmp.x);
+			theone.y != NaN && (theone.y = thisCmp.y);
+			theone.width != NaN && (theone.width = thisCmp.width);
+			theone.height != NaN && (theone.height = thisCmp.height);
+
+			theone.top != NaN && (theone.top = thisCmp.top);
+			theone.bottom != NaN && (theone.bottom = thisCmp.bottom);
+			theone.left != NaN && (theone.left = thisCmp.left);
+			theone.right != NaN && (theone.right = thisCmp.right);
+
+			thisCmp.visible = false;
+			this.removeChild(thisCmp)
+			this.addChild(theone)
+			return theone;
+		}
+
+
 
 		public afterLoaded() {
 			if (this.battle instanceof Battle)
@@ -49,6 +62,16 @@ module dragon.view {
 			}
 			this.battle = battle;
 			this.addChild(this.battle);
+		}
+
+		public showPanel(pnl: string) {
+			this.grp_subpanel.removeChildren();
+			let subpanel = this.subpanels[pnl];
+			if (!subpanel) {
+				console.log('无法切换到[%s]界面', pnl);
+			}
+			subpanel.percentWidth = subpanel.percentHeight = 100;
+			this.grp_subpanel.addChild(subpanel);
 		}
 	}
 	export const mainscene = new MainScene();

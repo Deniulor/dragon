@@ -7,11 +7,11 @@ module dragon.panel {
 		private img_new: eui.Image;
 		private lbl_version: eui.Label;
 
-		public getPanelName(): string { return 'Login'; }
+		public get PanelName(): string { return 'Login'; }
 		public constructor() {
 			super();
 			this.btn_start.addEventListener(egret.TouchEvent.TOUCH_END, this.startGame, this);
-			this.lbl_version.text = 'version:' + window['LEGEND_VERSION']; //游戏加载完成后初始化SDK
+			this.lbl_version.text = 'version:' + window['DRAGON_VERSION']; //游戏加载完成后初始化SDK
 		}
 
 		private startGame(evt: egret.TouchEvent) {

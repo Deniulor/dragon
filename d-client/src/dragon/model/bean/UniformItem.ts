@@ -8,6 +8,7 @@ module dragon.model {
 		public get type(): enums.ItemType { return this.data.Type }
 		public get itemId(): number { return this.data.ItemID }
 		public get name(): string { return this.data.Name }
+		public get icon(): string { return this.data.Icon }
 
 
 		public count: number;

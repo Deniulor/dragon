@@ -18,7 +18,7 @@ module dragon.kernel0 {
 			var group = this.groups[groupname];
 			if (!group) {
 				group = this.errGroup;
-				console.error("[legend.data] group [%s] not found", groupname);
+				console.error("[dragon.data] group [%s] not found", groupname);
 			}
 			return group;
 		}
@@ -41,7 +41,7 @@ module dragon.kernel0 {
 			var data = this.group('language').find(name);
 			if (!data) {
 				if (DEBUG) {
-					console.error("[legend.data] language [%s] not found", name);
+					console.error("[dragon.data] language [%s] not found", name);
 				}
 				return [];
 			}
@@ -167,7 +167,7 @@ module dragon.kernel0 {
 				var rtn = this.datas[key];
 				if (DEBUG) {
 					if (!rtn) {
-						console.error('[legend.data] group:%s 没有键值为[%s]的配置.', this.name, key);
+						console.error('[dragon.data] group:%s 没有键值为[%s]的配置.', this.name, key);
 					}
 				}
 				return rtn;

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="main" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:view="dragon.view.*" width="640">
-	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xc0c0c0" />
+	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xc0c0c0"  locked="true"/>
 	<e:Image source="bg_png" width="640" height="1136" y="0" visible="false" />
 	<e:Component id="battle" skinName="Battle" anchorOffsetY="0" height="266" width="640" x="0" y="72" />
-	<e:Component id="recorder" width="640" x="0" height="372.52" y="550.12" skinName="Recorder" anchorOffsetY="0"/>
 	<e:Component id="attribute" height="200" y="344.06" anchorOffsetY="0" left="0" right="0" skinName="Attribute"/>
+	<e:Group id="grp_subpanel" width="640" bottom="106" top="550">
+		<e:Component skinName="Recorder" scaleX="1" scaleY="1" right="0" left="0" top="0" bottom="0"/>
+	</e:Group>
+
+	<e:Component id="mainMenu" width="640" height="100" x="0" bottom="0" skinName="MainMenu"/>
 </e:Skin>

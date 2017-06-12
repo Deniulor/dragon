@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="Package" width="640" height="300" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+    <e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xffffff" locked="true"/>
+	<e:Scroller left="0" right="0" top="0" bottom="0" scrollPolicyH="off">
+		<e:Group>
+			<e:List id="lst_item" left="0" right="0" top="0" bottom="0" x="0" y="0" scaleX="1" scaleY="1" itemRendererSkinName="Item">
+				<e:layout>
+				<e:TileLayout orientation="rows" horizontalAlign="left" verticalAlign="top" horizontalGap="50" verticalGap="11" rowHeight="62" columnWidth="58" paddingLeft="22" paddingTop="20"/>
+				</e:layout>
+				<e:ArrayCollection>
+					<e:Array>
+						<e:Object name="null"/>
+						<e:Object name="null"/>
+						<e:Object name="null"/>
+						<e:Object name="null"/>
+						<e:Object name="null"/>
+						<e:Object name="null"/>
+						<e:Object name="null"/>
+						<e:Object name="null"/>
+						<e:Object name="null"/>
+						<e:Object name="null"/>
+						<e:Object name="null"/>
+						<e:Object name="null"/>
+						<e:Object name="null"/>
+						<e:Object name="null"/>
+						<e:Object name="null"/>
+						<e:Object name="null"/>
+					</e:Array>
+				</e:ArrayCollection>
+			</e:List>
+        </e:Group>
+	</e:Scroller>
+</e:Skin>

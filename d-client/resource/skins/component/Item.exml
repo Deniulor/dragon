@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="Item" width="60" height="60" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect fillColor="0x767676" ellipseWidth="22" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" width="36" height="36" verticalCenter="-8.5"/>
+	<e:Image id="img_icon" source="icon_body_png" verticalCenter="-7.5" horizontalCenter="0"/>
+	<e:Label id="lbl_name" text="四个字长" horizontalCenter="0.5" bottom="4" size="15" fontFamily="Microsoft YaHei" textColor="0xff7100"/>
+</e:Skin>
