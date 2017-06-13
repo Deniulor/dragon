@@ -1,19 +1,19 @@
-﻿统一物品ID	品质	实际物品类型,枚举类型	物品ID	物品名称	物品图标ID	物品介绍
-number	enum<Quality>	enum<ItemType>	number	string	string	string
-id	Quality	Type	ItemID	Name	Icon	Description
-1	1	Gold		金币	icon_ring_png	钱不是万能的，但没有钱是万万不能的。
-2	5	Crystal		钻石	icon_ring_png	元宝越多，游戏越好玩。
-3	1	Exp		经验	icon_ring_png	有经验就可以升级，等级越高越强大。
-4	1	Item	1001	示例物品	icon_ring_png	累计可提升VIP等级。
-11001	1	Equip	1001	桃木剑	icon_weapon_png	1级峨眉武器
-11002	2	Equip	1002	桃木剑	icon_weapon_png	1级峨眉武器
-11003	3	Equip	1003	桃木剑	icon_weapon_png	1级峨眉武器
-11004	4	Equip	1004	桃木剑	icon_weapon_png	1级峨眉武器
-11005	5	Equip	1005	桃木剑	icon_weapon_png	1级峨眉武器
-11006	6	Equip	1006	桃木神剑	icon_weapon_png	1级峨眉武器
-11007	1	Equip	1007	少女发饰	icon_weapon_png	1级峨眉发饰
-11008	2	Equip	1008	少女发饰	icon_weapon_png	1级峨眉发饰
-11009	3	Equip	1009	少女发饰	icon_weapon_png	1级峨眉发饰
-11010	4	Equip	1010	少女发饰	icon_weapon_png	1级峨眉发饰
-11011	5	Equip	1011	少女发饰	icon_weapon_png	1级峨眉发饰
-11012	6	Equip	1012	神少女发饰	icon_weapon_png	1级峨眉发饰
+﻿统一物品ID	品质	实际物品类型,枚举类型	物品ID	是否在背包显示	物品名称	物品图标ID	物品介绍
+number	enum<Quality>	enum<ItemType>	number	boolean	string	string	string
+id	Quality	Type	ItemID	ShowInPack	Name	Icon	Description
+1	1	Gold		FALSE	金币	icon_ring_png	钱不是万能的，但没有钱是万万不能的。
+2	5	Crystal		FALSE	钻石	icon_ring_png	元宝越多，游戏越好玩。
+3	1	Exp		FALSE	经验	icon_ring_png	有经验就可以升级，等级越高越强大。
+4	1	Item	1001	TRUE	示例物品	icon_ring_png	累计可提升VIP等级。
+11001	1	Equip	1001	TRUE	桃木剑	icon_weapon_png	1级峨眉武器
+11002	2	Equip	1002	TRUE	桃木剑	icon_weapon_png	1级峨眉武器
+11003	3	Equip	1003	TRUE	桃木剑	icon_weapon_png	1级峨眉武器
+11004	4	Equip	1004	TRUE	桃木剑	icon_weapon_png	1级峨眉武器
+11005	5	Equip	1005	TRUE	桃木剑	icon_weapon_png	1级峨眉武器
+11006	6	Equip	1006	TRUE	桃木神剑	icon_weapon_png	1级峨眉武器
+11007	1	Equip	1007	TRUE	少女发饰	icon_weapon_png	1级峨眉发饰
+11008	2	Equip	1008	TRUE	少女发饰	icon_weapon_png	1级峨眉发饰
+11009	3	Equip	1009	TRUE	少女发饰	icon_weapon_png	1级峨眉发饰
+11010	4	Equip	1010	TRUE	少女发饰	icon_weapon_png	1级峨眉发饰
+11011	5	Equip	1011	TRUE	少女发饰	icon_weapon_png	1级峨眉发饰
+11012	6	Equip	1012	TRUE	神少女发饰	icon_weapon_png	1级峨眉发饰

@@ -9,14 +9,14 @@ module dragon.view {
 			this.lst_item.dataProvider = new eui.ArrayCollection([]);
 			this.lst_item.itemRenderer = view.component.Item;
 
-			kernel.event.addEventListener('dragon.package.changed', this.onPackageChanged, this);
+			kernel.event.addEventListener('dragon.package.changed', this.refresh, this);
 		}
 
-		public onPackageChanged(event: egret.Event) {
+		public refresh() {
 			let arr = [];
 			for (let k in dragon.manager.package.items) {
 				let item = dragon.manager.package.items[k];
-				arr.push(dragon.manager.package.items[k]);
+				item.showInPack && arr.push(dragon.manager.package.items[k]);
 			}
 			this.lst_item.dataProvider = new eui.ArrayCollection(arr);
 		}

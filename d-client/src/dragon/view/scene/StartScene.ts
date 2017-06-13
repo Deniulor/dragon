@@ -12,8 +12,13 @@ module dragon.view {
 		}
 
 		private onAllLoaded() {
+			this.beforeStart();
 			kernel.ui.close(panel.Loading);
 			kernel.ui.open(panel.Login);
+		}
+
+		private beforeStart() {
+			dragon.utils.tools.initModel(dragon.manager);
 		}
 	}
 }

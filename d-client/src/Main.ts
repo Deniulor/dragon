@@ -68,7 +68,6 @@ class Main extends eui.UILayer {
         dragon.kernel.init();
         dragon.kernel.ui.init(this); //设置 root layer
         dragon.player.init();
-        dragon.utils.tools.initModel(dragon.manager);
 
         // 进入开始界面
         dragon.kernel.ui.loadScene(new dragon.view.StartScene());

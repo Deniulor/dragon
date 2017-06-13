@@ -207,6 +207,12 @@ module dragon.kernel0 {
 			return Number
 		} else if (type == 'string') {
 			return (v) => v
+		} else if (type == 'boolean') {
+			return (v) => {
+				if (v.toLowerCase() == 'false') return false
+				if (v.toLowerCase() == 'true') return true
+				return Boolean(v)
+			}
 		} else if (/^enum<\w+>$/.test(type)) {
 			let enum_name = type.replace(/^enum</, '').replace(/>$/, '');
 			for (let name in dragon.enums) {

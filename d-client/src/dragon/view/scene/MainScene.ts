@@ -69,6 +69,7 @@ module dragon.view {
 			let subpanel = this.subpanels[pnl];
 			if (!subpanel) {
 				console.log('无法切换到[%s]界面', pnl);
+				return
 			}
 			subpanel.percentWidth = subpanel.percentHeight = 100;
 			this.grp_subpanel.addChild(subpanel);
