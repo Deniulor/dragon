@@ -5,7 +5,7 @@
 			"name": "loading"
 		},
 		{
-			"keys": "general_txt,factor_txt,attribute_txt,buff_txt,monster_txt,skill_txt,unit_txt,language_txt,attrdefine_txt,drop_txt,uniformitem_txt",
+			"keys": "general_txt,factor_txt,attribute_txt,buff_txt,monster_txt,skill_txt,unit_txt,language_txt,attrdefine_txt,drop_txt,uniformitem_txt,equip_txt",
 			"name": "data"
 		},
 		{
@@ -592,6 +592,11 @@
 			"url": "assets/icon/icon_weapon.png",
 			"type": "image",
 			"name": "icon_weapon_png"
+		},
+		{
+			"url": "data/equip.txt",
+			"type": "text",
+			"name": "equip_txt"
 		}
 	]
 }

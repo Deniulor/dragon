@@ -1,0 +1,15 @@
+装备ID	名字	类型	等级	基础属性类型	基础属性最小值	基础属性最大值	附加属性条数	附加属性类型	附加属性最小值	附加属性最大值
+number	string	enum<Equip>	number	list<enum<Attr>>	list<number>	list<number>	number	list<enum<Attr>>	list<number>	list<number>
+id	#Name	Type	Level	BaseAttrType	BaseAttrValueMin	BaseAttrValueMax	ExtrAttrNum	ExtraAttrType	ExtraAttrValueMin	ExtraAttrValueMax
+1001	桃木剑	Weapon	1	ATK	767	767	1	ATK	767	767
+1002	桃木剑	Weapon	1	ATK;Critical	1073;137	1073;137	2	ATK;Critical	1073;137	1073;137
+1003	桃木剑	Weapon	1	ATK;Hit;Critical	1314;167;167	1314;167;167	3	ATK;Hit;Critical	1314;167;167	1314;167;167
+1004	桃木剑	Weapon	1	ATK;Hit;Critical;Tenacity	1644;209;209;522	1644;209;209;522	4	ATK;Hit;Critical;Tenacity	1644;209;209;522	1644;209;209;522
+1005	桃木剑	Weapon	1	MaxHP;ATK;Hit;Critical;Tenacity	1240;2246;285;286;713	1240;2246;285;286;713	5	MaxHP;ATK;Hit;Critical;Tenacity	1240;2246;285;286;713	1240;2246;285;286;713
+1006	桃木神剑	Weapon	1	MaxHP;ATK;Hit;Critical;Tenacity	1573;2847;362;361;904	1573;2847;362;361;904	6	MaxHP;ATK;Hit;Critical;Tenacity	1573;2847;362;361;904	1573;2847;362;361;904
+1007	少女发饰	Head	1	MaxHP	2965	2965	1	MaxHP	2965	2965
+1008	少女发饰	Head	1	MaxHP;Tenacity	4150;341	4150;341	2	MaxHP;Tenacity	4150;341	4150;341
+1009	少女发饰	Head	1	MaxHP;Dodge;Tenacity	5081;39;417	5081;39;417	3	MaxHP;Dodge;Tenacity	5081;39;417	5081;39;417
+1010	少女发饰	Head	1	MaxHP;DEF;Dodge;Tenacity	6352;57;48;522	6352;57;48;522	4	MaxHP;DEF;Dodge;Tenacity	6352;57;48;522	6352;57;48;522
+1011	少女发饰	Head	1	MaxHP;DEF;RGS;Dodge;Tenacity	8681;78;78;66;713	8681;78;78;66;713	5	MaxHP;DEF;RGS;Dodge;Tenacity	8681;78;78;66;713	8681;78;78;66;713
+1012	神少女发饰	Head	1	MaxHP;DEF;RGS;Dodge;Tenacity	11010;99;99;83;904	11010;99;99;83;904	6	MaxHP;DEF;RGS;Dodge;Tenacity	11010;99;99;83;904	11010;99;99;83;904

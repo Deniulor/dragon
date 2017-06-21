@@ -2,4 +2,5 @@
 string	string
 id	CN
 Battle.Record.Damage	<font color="{1}">{0}</font>使用了<font color="#ff4040">{2}</font>对<font color="{4}">{3}</font>造成了<font color="#ff4040">{5}</font>伤害
-Battle.Record.Gain	你获得了<font color="{0}">{1}</font>
+Battle.Record.Equip	你获得了<font color="{0}">{1}</font>
+Battle.Record.Gain	你获得了<font color="{0}">{1}</font> X {2}
